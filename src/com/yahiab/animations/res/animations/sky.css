@@ -4,7 +4,7 @@
     -fx-font-family: "LucidaBrightDemiBold";
     -fx-background: sky-blue;
     -fx-background-image: url("abdou3.jpg");
-    -fx-opacity : 0.5;
+    -fx-opacity: 1;
     -fx-base: rgb(250, 250, 250);
     -fx-focus-color: derive(sky-blue, 90%);
     sky-blue: rgb(17, 145, 213);

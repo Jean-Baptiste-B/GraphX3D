@@ -169,6 +169,11 @@ public class PDFController implements Initializable {
 
     @FXML
     public void loadCubePDF() {
+        System.out.println(PDFAccessor.class.getResource("cube.pdf").getPath());
+        System.out.println(PDFAccessor.class.getResource("cube.pdf").getProtocol());
+        System.out.println(PDFAccessor.class.getResource("cube.pdf").getAuthority());
+        System.out.println(PDFAccessor.class.getResource("cube.pdf").getHost());
+        System.out.println(PDFAccessor.class.getResource("cube.pdf").getRef());
         loadFile(PDFAccessor.class.getResource("cube.pdf").getPath());
     }
 
