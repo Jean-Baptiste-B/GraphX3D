@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="600.0" maxWidth="1024.0" minHeight="600.0" minWidth="1024.0"
+            prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="com.yahiab.app2d.contr2d">
+    <children>
+        <VBox id="root" fx:id="view3dRootVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="542.0" prefWidth="657.0">
+            <children>
+                <ToolBar prefHeight="41.0" prefWidth="658.0" style="-fx-background-color: rgb(100,100,100);">
+                    <items>
+                        <Pane maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="625.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <ColorPicker fx:id="idcolor" layoutX="200.0" layoutY="1.0" onAction="#color"
+                                             prefHeight="25.0" prefWidth="150.0" style="-fx-color: rgb(19,180,220);"/>
+                                <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="159.0" layoutY="2.0"
+                                           onMouseClicked="#export_img" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/2d/1430800581_698578-icon-65-document-image-128.png"/>
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </ImageView>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="7.0" layoutY="-1.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/2d/_599254_i0.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <HBox id="playControls" prefHeight="-1.0" prefWidth="-1.0">
+                            <padding>
+                                <Insets right="5.0"/>
+                            </padding>
+                        </HBox>
+                    </items>
+                </ToolBar>
+                <SplitPane fx:id="splitPane" focusTraversable="true" prefHeight="160.0" prefWidth="200.0"
+                           VBox.vgrow="ALWAYS">
+                    <items>
+                        <SplitPane dividerPositions="0.6901" maxHeight="1.7976931348623157E308" minWidth="160.0"
+                                   prefHeight="160.0" prefWidth="180.0">
+                            <items>
+                                <AnchorPane fx:id="body" minHeight="0.0" minWidth="350.0" prefHeight="485.0"
+                                            prefWidth="454.0" style="-fx-background-color: rgb(80,80,80);">
+                                    <children>
+                                        <Pane fx:id="paneca" layoutX="9.0" prefHeight="213.0" prefWidth="200.0"
+                                              style="-fx-background-color: white; -fx-border-color: rgb(19,180,220); -fx-border-width: 0;"
+                                              AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="33.0">
+                                            <children>
+                                                <Pane fx:id="panerotate" disable="true" layoutX="35.0" layoutY="260.0"
+                                                      prefHeight="41.0" prefWidth="150.0" visible="false">
+                                                    <children>
+                                                        <TextField fx:id="rotatevalue" layoutY="5.0" prefHeight="25.0"
+                                                                   prefWidth="50.0"/>
+                                                        <Separator layoutX="41.0" layoutY="-2.0" orientation="VERTICAL"
+                                                                   prefHeight="40.0" prefWidth="50.0"/>
+                                                        <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="95.0"
+                                                                   layoutY="-8.0" onMouseClicked="#appliquer_retate"
+                                                                   pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@res/2d/r.png"/>
+                                                            </image>
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND"/>
+                                                            </cursor>
+                                                        </ImageView>
+                                                    </children>
+                                                </Pane>
+                                                <GridPane fx:id="panecara" disable="true" hgap="20.0" layoutX="14.0"
+                                                          layoutY="15.0" prefHeight="67.0" prefWidth="158.0"
+                                                          visible="false">
+                                                    <children>
+                                                        <Label fx:id="textca" layoutX="71.0" layoutY="15.0"
+                                                               prefHeight="17.0" prefWidth="84.0"
+                                                               GridPane.columnIndex="1"/>
+                                                        <Label layoutX="14.0" layoutY="15.0" prefHeight="17.0"
+                                                               prefWidth="48.0" text="Type :"/>
+                                                        <Circle fx:id="colorca" fill="DODGERBLUE"
+                                                                focusTraversable="true" layoutX="71.0" layoutY="54.0"
+                                                                radius="10.0" stroke="#ddd7d7" strokeLineCap="BUTT"
+                                                                strokeLineJoin="BEVEL" strokeWidth="3.0"
+                                                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                        <Label layoutX="14.0" layoutY="45.0" prefHeight="17.0"
+                                                               prefWidth="57.0" text="Couleur :" GridPane.rowIndex="1"/>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0"
+                                                                           minWidth="10.0" prefWidth="62.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0"
+                                                                           minWidth="10.0" prefWidth="76.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                </GridPane>
+                                                <GridPane fx:id="hauteur_largeur" disable="true" hgap="14.0"
+                                                          layoutX="16.0" layoutY="110.0" visible="false">
+                                                    <children>
+                                                        <GridPane hgap="10.0" layoutX="16.0" layoutY="89.0"
+                                                                  prefHeight="50.0" prefWidth="106.0" vgap="10.0">
+                                                            <children>
+                                                                <Text layoutX="12.0" layoutY="140.0"
+                                                                      strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                      text="Hauteur :" GridPane.rowIndex="1"/>
+                                                                <TextField fx:id="hauteur" layoutX="94.0"
+                                                                           layoutY="127.0" maxWidth="44.0"
+                                                                           minHeight="20.0" minWidth="30.0"
+                                                                           prefHeight="20.0" prefWidth="44.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.rowIndex="1"/>
+                                                                <Text layoutY="111.0" strokeType="OUTSIDE"
+                                                                      strokeWidth="0.0" text="Largeur :"
+                                                                      wrappingWidth="66.775390625"/>
+                                                                <TextField fx:id="largeur" layoutX="94.0" layoutY="89.0"
+                                                                           maxWidth="40.0" minHeight="20.0"
+                                                                           minWidth="30.0" prefHeight="20.0"
+                                                                           prefWidth="40.0" GridPane.columnIndex="1"/>
+                                                            </children>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                        </GridPane>
+                                                        <Button layoutX="128.0" layoutY="92.0" mnemonicParsing="false"
+                                                                onAction="#appliquer_largeur_hauteur" prefHeight="31.0"
+                                                                prefWidth="54.0"
+                                                                style="-fx-background-color: rgb(19,170,220);" text="OK"
+                                                                textAlignment="CENTER" textFill="WHITE"
+                                                                GridPane.columnIndex="1">
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND"/>
+                                                            </cursor>
+                                                            <font>
+                                                                <Font size="13.0"/>
+                                                            </font>
+                                                        </Button>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                </GridPane>
+                                                <GridPane fx:id="rayon" disable="true" hgap="21.0" layoutX="16.0"
+                                                          layoutY="122.0" visible="false">
+                                                    <children>
+                                                        <Label layoutX="16.0" layoutY="106.0" text="Rayon :"/>
+                                                        <TextField fx:id="value_rayon" layoutX="63.0" layoutY="102.0"
+                                                                   prefHeight="25.0" prefWidth="40.0"
+                                                                   GridPane.columnIndex="1"/>
+                                                        <Button layoutX="122.0" layoutY="102.0" mnemonicParsing="false"
+                                                                onAction="#appliquer_rayon" prefHeight="31.0"
+                                                                prefWidth="54.0"
+                                                                style="-fx-background-color: rgb(19,170,220);" text="OK"
+                                                                textFill="WHITE" GridPane.columnIndex="2">
+                                                            <font>
+                                                                <Font size="13.0"/>
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND"/>
+                                                            </cursor>
+                                                        </Button>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                </GridPane>
+                                                <Separator fx:id="bare1" disable="true" layoutX="8.0" layoutY="182.0"
+                                                           prefHeight="0.0" prefWidth="182.0" visible="false"/>
+                                                <Pane fx:id="footerca" layoutY="200.0" prefHeight="15.0"
+                                                      prefWidth="200.0" style="-fx-background-color: rgb(19,190,220);"/>
+                                                <ImageView fx:id="pas_element_2D" fitHeight="126.0" fitWidth="127.0"
+                                                           layoutX="40.0" layoutY="36.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@res/2d/no_shape_2d.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <GridPane fx:id="affichage_cote" disable="true" layoutY="80.0"
+                                                          prefHeight="31.0" prefWidth="191.0" translateY="20.0"
+                                                          visible="false">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES"
+                                                                           maxWidth="95.0" minWidth="10.0"
+                                                                           prefWidth="63.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0"
+                                                                           minWidth="10.0" prefWidth="58.0"/>
+                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+                                                                           minWidth="10.0" prefWidth="100.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Separator orientation="VERTICAL" prefHeight="200.0"
+                                                                   GridPane.columnIndex="1"/>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Côte"
+                                                              wrappingWidth="50.13671875"/>
+                                                        <Button mnemonicParsing="false" onAction="#appliquer_cote"
+                                                                prefHeight="25.0" prefWidth="70.0"
+                                                                style="-fx-background-color: rgb(19,180,220);" text="OK"
+                                                                textFill="WHITE" GridPane.columnIndex="2">
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND"/>
+                                                            </cursor>
+                                                        </Button>
+                                                        <TextField fx:id="textcote" GridPane.columnIndex="1"/>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </Pane>
+                                        <GridPane fx:id="gridepos" disable="true" hgap="23.0" layoutX="23.0"
+                                                  layoutY="240.0" visible="false" AnchorPane.topAnchor="220.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Button layoutX="141.0" layoutY="206.0" mnemonicParsing="false"
+                                                        onAction="#appliquer_pos" prefHeight="31.0" prefWidth="54.0"
+                                                        style="-fx-background-color: rgb(19,170,220);" text="OK"
+                                                        textFill="WHITE" GridPane.columnIndex="1">
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                    <font>
+                                                        <Font size="13.0"/>
+                                                    </font>
+                                                </Button>
+                                                <GridPane layoutX="23.0" layoutY="172.0" prefHeight="60.0"
+                                                          prefWidth="91.0" vgap="5.0">
+                                                    <children>
+                                                        <TextField fx:id="posx" maxWidth="-Infinity"
+                                                                   minHeight="-Infinity" minWidth="-Infinity"
+                                                                   prefHeight="20.0" prefWidth="50.0"
+                                                                   GridPane.columnIndex="1"/>
+                                                        <TextField fx:id="posy" maxWidth="-Infinity"
+                                                                   minHeight="-Infinity" minWidth="-Infinity"
+                                                                   prefHeight="20.0" prefWidth="50.0"
+                                                                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                        <Label prefHeight="19.0" prefWidth="63.0" text="Position x :">
+                                                            <font>
+                                                                <Font size="10.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="17.0" prefWidth="59.0" text="Position y :"
+                                                               GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font size="10.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0"
+                                                                           minWidth="10.0" prefWidth="54.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0"
+                                                                           minWidth="10.0" prefWidth="37.0"/>
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="57.0" minHeight="10.0"
+                                                                        prefHeight="33.0" vgrow="SOMETIMES"/>
+                                                        <RowConstraints maxHeight="24.0" minHeight="0.0"
+                                                                        prefHeight="24.0" vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                </GridPane>
+                                            </children>
+                                        </GridPane>
+                                        <Text fx:id="error" disable="true" fill="#f2f0f0" layoutX="14.0" layoutY="406.0"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.0">
+                                            <font>
+                                                <Font size="11.0"/>
+                                            </font>
+                                        </Text>
+                                        <Pane layoutX="4.0" prefHeight="29.0" prefWidth="200.0"
+                                              style="-fx-background-color: rgb(19,190,220);" AnchorPane.leftAnchor="0.0"
+                                              AnchorPane.topAnchor="5.0">
+                                            <children>
+                                                <ImageView fx:id="buttondelete" disable="true" fitHeight="30.0"
+                                                           fitWidth="45.0" layoutX="170.0" layoutY="-1.0"
+                                                           onMouseClicked="#delete" pickOnBounds="true"
+                                                           preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@res/2d/delete2.png"/>
+                                                    </image>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND"/>
+                                                    </cursor>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane fx:id="place" layoutX="211.0" layoutY="4.0" onMouseClicked="#clique_place"
+                                              prefHeight="482.0" prefWidth="242.0" style="-fx-background-color: white;"
+                                              AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="209.0"
+                                              AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="4.0"/>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane maxWidth="180.0" minHeight="0.0" minWidth="198.0" prefHeight="489.0"
+                                            prefWidth="198.0" SplitPane.resizableWithParent="false">
+                                    <children>
+                                        <Accordion layoutX="35.0" layoutY="7.0" AnchorPane.rightAnchor="0.0"
+                                                   AnchorPane.topAnchor="0.0">
+                                            <panes>
+                                                <TitledPane prefHeight="370.0" prefWidth="202.0" text="2D">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273955.0"
+                                                                    prefWidth="200.0" style="-: 2px solid white;">
+                                                            <children>
+                                                                <GridPane layoutX="10.0" layoutY="237.0"
+                                                                          prefHeight="90.0" prefWidth="182.0"
+                                                                          AnchorPane.leftAnchor="0.0"
+                                                                          AnchorPane.rightAnchor="8.400000000000006">
+                                                                    <rowConstraints>
+                                                                        <RowConstraints maxHeight="30.0" minHeight="3.0"
+                                                                                        prefHeight="3.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints maxHeight="57.0"
+                                                                                        minHeight="10.0"
+                                                                                        prefHeight="57.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints/>
+                                                                    </columnConstraints>
+                                                                </GridPane>
+                                                                <GridPane hgap="5.0" layoutY="16.0" prefHeight="322.0"
+                                                                          prefWidth="191.0" vgap="15.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER"
+                                                                                           hgrow="SOMETIMES"
+                                                                                           maxWidth="95.0"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="94.0"/>
+                                                                        <ColumnConstraints halignment="CENTER"
+                                                                                           maxWidth="126.0"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="92.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="40.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <ImageView fitHeight="37.0" fitWidth="40.0"
+                                                                                   onMouseClicked="#ac"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607628_circle.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="44.0" fitWidth="46.0"
+                                                                                   onMouseClicked="#ar"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="1">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607714_rectangle.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="40.0" fitWidth="38.0"
+                                                                                   onMouseClicked="#at"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true" y="5.0"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="6">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607386_stroke_shape_triangle_up_gestureworks.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="39.0" fitWidth="44.0"
+                                                                                   onMouseClicked="#arho"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="2">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607755_rhombus.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="41.0" fitWidth="45.0"
+                                                                                   onMouseClicked="#ahex"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="3">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607687_hexagon.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="41.0" fitWidth="49.0"
+                                                                                   onMouseClicked="#apenta"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="4">
+                                                                            <image>
+                                                                                <Image url="@res/2d/1430607796_pentagon.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Triangle" GridPane.rowIndex="6"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Pentagon" GridPane.rowIndex="4"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Hexagon" GridPane.rowIndex="3"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Rhombus" GridPane.rowIndex="2"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Rectangle" GridPane.rowIndex="1"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Cercle "/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Parallélogramme"
+                                                                              GridPane.rowIndex="5"/>
+                                                                        <ImageView fitHeight="37.0" fitWidth="58.0"
+                                                                                   onMouseClicked="#aparall"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="5">
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                            <image>
+                                                                                <Image url="@res/2d/11210360_768972063219648_21432671_n.png"/>
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Button fx:id="retour_num_tria" disable="true"
+                                                                                mnemonicParsing="false"
+                                                                                onAction="#retour_num_triaf"
+                                                                                prefHeight="60.0" prefWidth="39.0"
+                                                                                style="-fx-background-color: rgb(19,170,220);"
+                                                                                text="&lt;" textFill="#f8f8f8"
+                                                                                visible="false" GridPane.rowIndex="7">
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </Button>
+                                                                        <Button fx:id="dessiner_t" disable="true"
+                                                                                mnemonicParsing="false"
+                                                                                onAction="#dessiner_tf"
+                                                                                prefHeight="53.0" prefWidth="134.0"
+                                                                                style="-fx-background-color: rgb(19,170,220);"
+                                                                                text="Cliquer ici pour dessiner votre triangle"
+                                                                                textFill="#f8f8f8" visible="false"
+                                                                                GridPane.columnIndex="1"
+                                                                                GridPane.rowIndex="7">
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                            <font>
+                                                                                <Font size="11.0"/>
+                                                                            </font>
+                                                                        </Button>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                                <TitledPane animated="false" prefHeight="300.0" prefWidth="194.0"
+                                                            text="Triangle">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0"
+                                                                    prefWidth="178.0">
+                                                            <children>
+                                                                <GridPane layoutX="1.0" layoutY="46.0"
+                                                                          prefHeight="219.0" prefWidth="202.0"
+                                                                          AnchorPane.topAnchor="20.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER"
+                                                                                           hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                        <ColumnConstraints halignment="CENTER"
+                                                                                           hgrow="SOMETIMES"
+                                                                                           minWidth="10.0"
+                                                                                           prefWidth="100.0"/>
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                        <RowConstraints minHeight="10.0"
+                                                                                        prefHeight="30.0"
+                                                                                        vgrow="SOMETIMES"/>
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <ImageView fitHeight="120.0" fitWidth="98.0"
+                                                                                   onMouseClicked="#atis"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1">
+                                                                            <image>
+                                                                                <Image url="@res/2d/trianglemotassawisa9ayn.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="88.0" fitWidth="104.0"
+                                                                                   onMouseClicked="#atp"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="1">
+                                                                            <image>
+                                                                                <Image url="@res/2d/triangleperpandiculaire.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="80.0" fitWidth="85.0"
+                                                                                   onMouseClicked="#ae"
+                                                                                   pickOnBounds="true"
+                                                                                   preserveRatio="true"
+                                                                                   GridPane.columnIndex="1"
+                                                                                   GridPane.rowIndex="2">
+                                                                            <image>
+                                                                                <Image url="@res/2d/trianglemota9ayeseladhla3.png"/>
+                                                                            </image>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="HAND"/>
+                                                                            </cursor>
+                                                                        </ImageView>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Triangle isocèle"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Triangle Equilateral"
+                                                                              wrappingWidth="93.16796875"
+                                                                              GridPane.halignment="CENTER"
+                                                                              GridPane.rowIndex="2"/>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                                              text="Triangle Perpenduculaire"
+                                                                              wrappingWidth="91.642578125"
+                                                                              GridPane.halignment="CENTER"
+                                                                              GridPane.rowIndex="1"
+                                                                              GridPane.valignment="CENTER"/>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </TitledPane>
+                                            </panes>
+                                        </Accordion>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </items>
+                </SplitPane>
+                <ToolBar id="statusBar" style="-fx-background-color: rgb(100,100,100);" styleClass="bottom"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

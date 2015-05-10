@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0"
+            minWidth="1024.0" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="com.yahiab.graphix.controller.videos.VideosController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+                AnchorPane.topAnchor="50.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="225.0" prefWidth="225.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         </rowConstraints>
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#playVideo1" text="Les solides géométriques (1)"
+                          GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                  <Button mnemonicParsing="false" onAction="#playVideo2" text="Les solides géométriques (2)"
+                          GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+                  <Button mnemonicParsing="false" onAction="#playVideo3" text="Les formes géométriques planes (1)"
+                          GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+                  <Button mnemonicParsing="false" onAction="#playVideo4" text="Les formes géométriques planes (2)"
+                          GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="50.0" top="50.0"/>
+               </GridPane.margin>
+            </GridPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Pane fx:id="videoPane" layoutX="246.0" layoutY="222.0" minHeight="400.0" minWidth="600.0"
+                        prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="100.0"
+                        AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0"/>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

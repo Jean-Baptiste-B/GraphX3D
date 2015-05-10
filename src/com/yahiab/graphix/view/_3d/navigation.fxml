@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" id="controller" alignment="CENTER" spacing="10.0"
+      fx:controller="com.yahiab.graphix.controller._3d.NavigationController">
+  <children>
+    <ScrollBar fx:id="zoomBar" orientation="VERTICAL" rotate="180.0" />
+  </children>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+</VBox>

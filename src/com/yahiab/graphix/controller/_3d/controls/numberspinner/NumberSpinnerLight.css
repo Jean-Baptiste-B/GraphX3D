@@ -1,0 +1,82 @@
+.number-spinner-light {
+    -fx-skin: "com.yahiab.graphix.controller._3d.controls.numberspinner.NumberSpinnerLightSkin";
+    -fx-padding: 0 0 0 0;
+    -fx-cursor: default; /* Override the cursor since the "text" cursor is inherited from text field. But we want the default cursor over the buttons. */
+}
+
+/* A left directed arrow */
+.number-spinner-light .arrow {
+    -fx-padding: 3 3.5 3 3.5;
+    -fx-shape: "M 100 100 L 300 100 L 200 300 z";
+    -fx-background-color: #000000;
+}
+
+/* Make one-side rounded buttons */
+.number-spinner-light .button.top-right {
+    -fx-background-insets: 1 1 0 0, 1 1 0 0, 2 2 1 1, 3 3 2 2;
+    -fx-background-radius: 0 3 0 0, 0 3 0 0, 0 2 0 0, 0 1 0 0;
+}
+
+.number-spinner-light .button.bottom-right {
+    -fx-background-insets: 0 1 1 0, 0 1 1 0, 1 2 2 1, 2 3 3 2;
+    -fx-background-radius: 0 0 3 0, 0 0 3 0, 0 0 1 0, 0 0 1 0;
+}
+
+.number-spinner-light .button.top-left {
+    -fx-background-insets: 1 0 0 1, 1 0 0 1, 2 1 1 2, 3 2 2 3;
+    -fx-background-radius: 3 0 0 0, 3 0 0 0, 2 0 0 0, 1 0 0 0;
+}
+
+.number-spinner-light .button.bottom-left {
+    -fx-background-insets: 0 0 1 1, 0 0 1 1, 1 1 2 2, 2 2 3 3;
+    -fx-background-radius: 0 0 0 3, 0 0 0 3, 0 0 0 2, 0 0 0 1;
+}
+
+.number-spinner-light .button.left {
+    -fx-background-insets: 1 0 1 1, 1 0 1 1, 2 1 2 2, 3 2 3 3;
+    -fx-background-radius: 3 0 0 3, 3 0 0 3, 2 0 0 2, 1 0 0 1;
+}
+
+.number-spinner-light .button.right {
+    -fx-background-insets: 1 1 1 0, 1 1 1 0, 2 2 2 1, 3 3 3 2;
+    -fx-background-radius: 0 3 3 0, 0 3 3 0, 0 2 2 0, 0 1 1 0;
+}
+
+/* Only make one side of the text field with round borders. */
+.number-spinner-light .text-field.left {
+    -fx-background-radius: 3 0 0 3, 2 0 0 2, 2 0 0 2;
+}
+
+.number-spinner-light .text-field.right {
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 2 2 0;
+}
+
+/* Don't use round borders if the text field is in the center */
+.number-spinner-light .text-field.center {
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+/* Make the focused text field look like an unfocused text field, since the whole spinner is already focused. */
+.number-spinner-light .text-field:focused {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+}
+
+/* Move the insets accordingly, so that there is still a little border visible between buttons and text field. */
+.number-spinner-light .text-field.left:focused {
+    -fx-background-insets: 2 0 2 2, 2 1 2 2, 2;
+}
+
+.number-spinner-light .text-field.right:focused {
+    -fx-background-insets: 2 2 2 0, 2 2 2 1, 2;
+}
+
+.number-spinner-light .text-field.center:focused {
+    -fx-background-insets: 2 0 2 0, 2 1 2 1, 2;
+}
+
+/* Apply the focus style to the whole control */
+.number-spinner-light-focused {
+    -fx-background-color: -fx-focus-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: -0.4, 1, 2;
+    -fx-background-radius: 3.4, 2, 2;
+}

@@ -1,0 +1,6 @@
+#pere {
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
