@@ -1,5 +1,8 @@
 package com.yahiab.graphix.controller;
 
+import com.yahiab.animations.AnimationsController;
+import com.yahiab.app2d.Main;
+import com.yahiab.coursquiz.CoursQuizController;
 import com.yahiab.graphix.GraphiXX;
 import com.yahiab.graphix.controller.pdf.PDFController;
 import com.yahiab.graphix.controller.videos.VideosController;
@@ -92,7 +95,7 @@ public class RootLayoutController implements Initializable{
     @FXML
     public void actionButton2D() {
         try {
-            FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("../app2d/kikim_2d.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("kikim_2d.fxml"));
             AnchorPane node = loader.load();
 
             Stage app2dStage = new Stage();
@@ -110,7 +113,7 @@ public class RootLayoutController implements Initializable{
     @FXML
     public void actionButtonDemos() {
         try {
-            FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("../animations/AnimationsView.fxml"));
+            FXMLLoader loader = new FXMLLoader(AnimationsController.class.getResource("AnimationsView.fxml"));
             AnchorPane node = loader.load();
 
             Stage animationsStage = new Stage();
@@ -130,7 +133,7 @@ public class RootLayoutController implements Initializable{
     @FXML
     public void actionButtonQuiz() {
         try {
-            FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("../coursquiz/CoursQuiz.fxml"));
+            FXMLLoader loader = new FXMLLoader(CoursQuizController.class.getResource("CoursQuiz.fxml"));
             AnchorPane node = loader.load();
 
             Stage coursQuizStage = new Stage();
