@@ -15,6 +15,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.SVGPath;
+import res.PDFs.PDFAccessor;
 
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
@@ -167,48 +168,48 @@ public class PDFController implements Initializable {
     }
 
     @FXML
-    public void loadConePDF() {
-        loadFile("src/res/PDFs/cone.pdf");
+    public void loadCubePDF() {
+        loadFile(PDFAccessor.class.getResource("cube.pdf").getPath());
     }
 
     @FXML
-    public void loadCubePDF() {
-        loadFile("src/res/PDFs/cube.pdf");
+    public void loadConePDF() {
+        loadFile(PDFAccessor.class.getResource("cone.pdf").getPath());
     }
 
     @FXML
     public void loadBoxPDF() {
-        loadFile("src/res/PDFs/box.pdf");
+        loadFile(PDFAccessor.class.getResource("box.pdf").getPath());
     }
 
     @FXML
     public void loadCylinderPDF() {
-        loadFile("src/res/PDFs/cylinder.pdf");
+        loadFile(PDFAccessor.class.getResource("cylinder.pdf").getPath());
     }
 
     @FXML
     public void loadDodecahedronPDF() {
-        loadFile("src/res/PDFs/dodecahedron.pdf");
+        loadFile(PDFAccessor.class.getResource("dodecahedron.pdf").getPath());
     }
 
     @FXML
     public void loadOctahedronPDF() {
-        loadFile("src/res/PDFs/octahedron.pdf");
+        loadFile(PDFAccessor.class.getResource("octahedron.pdf").getPath());
     }
 
     @FXML
     public void loadPrismPDF() {
-        loadFile("src/res/PDFs/prism.pdf");
+        loadFile(PDFAccessor.class.getResource("prism.pdf").getPath());
     }
 
     @FXML
     public void loadPyramidPDF() {
-        loadFile("src/res/PDFs/pyramid.pdf");
+        loadFile(PDFAccessor.class.getResource("pyramid.pdf").getPath());
     }
 
     @FXML
     public void loadTetrahedronPDF() {
-        loadFile("src/res/PDFs/tetrahedron.pdf");
+        loadFile(PDFAccessor.class.getResource("tetrahedron.pdf").getPath());
     }
 
     class PrintThread extends Thread {
