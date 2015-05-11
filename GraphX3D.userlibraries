@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="vecmath-1.5.2">
+    <archive path="E:/GraphX3D/lib/vecmath-1.5.2.jar" />
+  </library>
+  <library name="poly2tri-core-0.1.0-SNAPSHOT">
+    <archive path="E:/GraphX3D/lib/poly2tri-core-0.1.0-SNAPSHOT.jar" />
+  </library>
+  <library name="slf4j-api-1.7.12">
+    <archive path="E:/GraphX3D/lib/slf4j-api-1.7.12.jar" />
+  </library>
+  <library name="PDFRenderer-0.9.1">
+    <archive path="E:/GraphX3D/lib/PDFRenderer-0.9.1.jar" />
+  </library>
+</eclipse-userlibraries>
+

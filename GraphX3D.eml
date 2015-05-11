@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/GraphX3D"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="PDFRenderer-0.9.1" value="project"/>
+		<level name="poly2tri-core-0.1.0-SNAPSHOT" value="project"/>
+		<level name="slf4j-api-1.7.12" value="project"/>
+		<level name="vecmath-1.5.2" value="project"/>
+	</levels>
+</component>

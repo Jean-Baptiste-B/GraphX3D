@@ -86,14 +86,14 @@ public class RootLayoutController implements Initializable{
         try {
             FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("view/_3d/main.fxml"));
             AnchorPane node = loader.load();
-            /*
-            rootBorderPane.setCenter(node);
-
-            node.prefWidthProperty().bind(((BorderPane) node.getParent()).prefWidthProperty());
-            node.prefHeightProperty().bind(((BorderPane) node.getParent()).prefHeightProperty().subtract(20));
-            */
             Stage stageApp3D = new Stage();
             Scene sceneApp3D = new Scene(node);
+
+            /*
+            sceneApp3D.getStylesheets().clear();
+            sceneApp3D.getStylesheets().addAll(GraphiXX.class.getResource("view/_3d/flatred.css").toExternalForm());
+            */
+
             stageApp3D.setMaximized(true);
             stageApp3D.setScene(sceneApp3D);
             stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D et plein de fonctionnalit\u00e9s");
