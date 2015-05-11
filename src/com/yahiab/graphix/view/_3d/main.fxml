@@ -13,7 +13,7 @@
    <children>
       <VBox id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-             <GridPane style="-fx-background-color: DEECFF;">
+             <GridPane style="-fx-background-color: #ffffff;">
                  <columnConstraints>
                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0"/>
@@ -22,18 +22,20 @@
                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                  </rowConstraints>
                  <children>
-                     <ToolBar style="-fx-background-color: #deecff;">
+                     <ToolBar style="-fx-background-color: #ffffff;">
                          <items>
                              <Button fx:id="btnOpenMenu" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#open" prefHeight="55.0"
-                                     style="-fx-background-color: F5F9FF; -fx-border-radius: 10%;" text="Ouvrir">
+                                     onAction="#open" prefHeight="55.0" styleClass="topmenubutton" text="Ouvrir">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
+                                 <font>
+                                     <Font name="System Bold" size="13.0"/>
+                                 </font>
                              </Button>
                              <MenuButton fx:id="btnSave" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                         prefHeight="55.0" style="-fx-background-color: F5F9FF; -fx-border-radius: 10%;"
-                                         text="Enregistrer">
+                                         prefHeight="55.0" styleClass="topmenubutton" text="Enregistrer"
+                                         textFill="WHITE">
                                  <items>
                                      <MenuItem mnemonicParsing="false" onAction="#saveAs"
                                                text="Enregistrer le modèle 3D actuel (sous format FXML)"/>
@@ -47,41 +49,51 @@
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
+                                 <font>
+                                     <Font name="System Bold" size="13.0"/>
+                                 </font>
                              </MenuButton>
                              <Button fx:id="btn3DPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#saveAsSTLFile" prefHeight="55.0"
-                                     style="-fx-background-color: F5F9FF; -fx-border-radius: 10%;" text="Impression 3D">
+                                     onAction="#saveAsSTLFile" prefHeight="55.0" styleClass="topmenubutton"
+                                     text="Impression 3D">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
+                                 <font>
+                                     <Font name="System Bold" size="13.0"/>
+                                 </font>
                              </Button>
                              <Button fx:id="btnPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#printOnPaper" prefHeight="55.0"
-                                     style="-fx-background-color: F5F9FF; -fx-border-radius: 10%;" text="Imprimer">
+                                     onAction="#printOnPaper" prefHeight="55.0" styleClass="topmenubutton"
+                                     text="Imprimer">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
+                                 <font>
+                                     <Font name="System Bold" size="13.0"/>
+                                 </font>
                              </Button>
                              <Button fx:id="btnDelete" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#buttonDeleteSelectedShape" prefHeight="55.0"
-                                     style="-fx-background-color: #FFEEEE; -fx-border-radius: 10%;" text="Supprimer">
+                                     onAction="#buttonDeleteSelectedShape" prefHeight="55.0" styleClass="deletebuttons"
+                                     text="Supprimer">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
                              </Button>
                              <Button fx:id="btnDeleteAll" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#buttonDeleteAll" prefHeight="55.0"
-                                     style="-fx-background-color: #FFEEEE; -fx-border-radius: 10%;"
+                                     onAction="#buttonDeleteAll" prefHeight="55.0" styleClass="deletebuttons"
                                      text="Supprimer tout">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
                              </Button>
                          </items>
+                         <GridPane.margin>
+                             <Insets/>
+                         </GridPane.margin>
                      </ToolBar>
                      <ToggleButton fx:id="btnSettings" contentDisplay="CENTER" maxHeight="55.0" minHeight="55.0"
                                    mnemonicParsing="false" onAction="#toggleSettings" prefHeight="55.0"
-                                   style="-fx-background-color: F5F9FF; -fx-border-radius: 10%;"
                                    GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                          <cursor>
                              <Cursor fx:constant="HAND"/>
@@ -93,7 +105,7 @@
                         VBox.vgrow="ALWAYS">
               <items>
                   <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300" minWidth="275.0" prefHeight="200.0"
-                              prefWidth="275.0" style="-fx-background-color: DEECFF;">
+                              prefWidth="275.0" style="-fx-background-color: #ffffff;">
                      <children>
                          <GridPane fx:id="selectedShapeGridPane" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT"
                                    AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
@@ -301,15 +313,15 @@
                      <items>
                          <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
                          <Accordion fx:id="settings" maxWidth="250.0" minWidth="0.0" prefHeight="600.0"
-                                    prefWidth="250.0">
+                                    prefWidth="250.0" style="-fx-background-color: #ffffff;">
                            <panes>
-                               <TitledPane alignment="CENTER" animated="false" expanded="false"
-                                           style="-fx-background-color: #deecff;" text="Formes 3D" fx:id="x4">
+                               <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"
+                                           fx:id="x4">
                                  <content>
-                                     <ScrollPane style="-fx-background-color: #DEECFF;">
+                                     <ScrollPane style="-fx-background-color: #ffffff;">
                                          <content>
                                              <GridPane alignment="CENTER" hgap="5.0"
-                                                       style="-fx-background-color: #DEECFF;" styleClass="settings"
+                                                       style="-fx-background-color: #ffffff;" styleClass="settings"
                                                        vgap="5.0">
                                                  <children>
                                                      <Label alignment="CENTER" text="Formes 3D"
@@ -708,7 +720,7 @@
                   </SplitPane>
               </items>
             </SplitPane>
-           <ToolBar id="statusBar" styleClass="bottom">
+             <ToolBar id="statusBar" style="-fx-background-color: #ffffff;" styleClass="bottom">
              <items>
                  <Label fx:id="statusNumberOfNodes" text="Label"/>
                  <Label fx:id="statusSelectedShape" text="Label"/>

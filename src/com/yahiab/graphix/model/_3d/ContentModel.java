@@ -345,7 +345,7 @@ public class ContentModel implements Initializable {
 
         SubScene subScene = new SubScene(root3D, 800, 600, true, SceneAntialiasing.BALANCED);
         this.subScene.set(subScene);
-        subScene.setFill(Color.ALICEBLUE);
+        subScene.setFill(Color.CORAL);
         subScene.setCamera(camera);
         // SCENE EVENT HANDLING FOR CAMERA NAV
         subScene.addEventHandler(MouseEvent.ANY, mouseEventHandler);

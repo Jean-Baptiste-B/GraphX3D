@@ -81,3 +81,44 @@
     -fx-background-insets: -0.2, 1, 2, 1 32 1 1, 1 33 1 1;
     -fx-background-radius: 3px, 2px, 1px, 2px 0 0 2px, 1 0 0 1;
 }
+
+/*********************************************************************************/
+
+.topmenubutton {
+    -fx-background-color: #0070d6;
+    -fx-border-radius: 10%;
+    -fx-text-fill: #ffffff;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+    -fx-start-margin: 5px;
+    -fx-end-margin: 5px;
+}
+
+.topmenubutton:hover {
+    -fx-background-color: #3edc69;
+    -fx-text-fill: #ffffff;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.topmenutoolbar {
+    -fx-background-color: white;
+    -fx-fill: white;
+}
+
+.deletebuttons {
+    -fx-background-color: #f04c4a;
+    -fx-border-radius: 10%;
+    -fx-text-fill: #ffffff;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+    -fx-start-margin: 5px;
+    -fx-end-margin: 5px;
+}
+
+.deletebuttons:hover {
+    -fx-background-color: #f0000e;
+    -fx-text-fill: #ffffff;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}

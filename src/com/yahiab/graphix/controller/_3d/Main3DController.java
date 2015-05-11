@@ -388,58 +388,58 @@ public class Main3DController implements Initializable {
 
             SVGPath SVGPathOpen = new SVGPath();
             SVGPathOpen.setContent(SVGPathIcons.openFolder);
-            SVGPathOpen.setScaleX(0.8);
-            SVGPathOpen.setScaleY(0.8);
-            SVGPathOpen.setScaleZ(0.8);
-            SVGPathOpen.setFill(Paint.valueOf("#00318C"));
+            SVGPathOpen.setScaleX(0.7);
+            SVGPathOpen.setScaleY(0.7);
+            SVGPathOpen.setScaleZ(0.7);
+            SVGPathOpen.setFill(Paint.valueOf("#ffffff"));
             btnOpenMenu.setGraphic(SVGPathOpen);
 
             SVGPath rocket = new SVGPath();
             rocket.setContent(SVGPathIcons.rocket);
-            rocket.setScaleX(0.8);
-            rocket.setScaleY(0.8);
-            rocket.setScaleZ(0.8);
-            rocket.setFill(Paint.valueOf("#00318C"));
+            rocket.setScaleX(0.7);
+            rocket.setScaleY(0.7);
+            rocket.setScaleZ(0.7);
+            rocket.setFill(Paint.valueOf("#ffffff"));
             btn3DPrint.setGraphic(rocket);
 
             SVGPath print = new SVGPath();
             print.setContent(SVGPathIcons.print);
-            print.setScaleX(0.8);
-            print.setScaleY(0.8);
-            print.setScaleZ(0.8);
-            print.setFill(Paint.valueOf("#00318C"));
+            print.setScaleX(0.7);
+            print.setScaleY(0.7);
+            print.setScaleZ(0.7);
+            print.setFill(Paint.valueOf("#ffffff"));
             btnPrint.setGraphic(print);
 
             SVGPath floppy = new SVGPath();
             floppy.setContent(SVGPathIcons.floppydisk);
-            floppy.setScaleX(0.8);
-            floppy.setScaleY(0.8);
-            floppy.setScaleZ(0.8);
-            floppy.setFill(Paint.valueOf("#00318C"));
+            floppy.setScaleX(0.7);
+            floppy.setScaleY(0.7);
+            floppy.setScaleZ(0.7);
+            floppy.setFill(Paint.valueOf("#ffffff"));
             btnSave.setGraphic(floppy);
 
             SVGPath cross = new SVGPath();
             cross.setContent(SVGPathIcons.cross);
-            cross.setScaleX(0.8);
-            cross.setScaleY(0.8);
-            cross.setScaleZ(0.8);
-            cross.setFill(Paint.valueOf("#AB0000"));
+            cross.setScaleX(0.7);
+            cross.setScaleY(0.7);
+            cross.setScaleZ(0.7);
+            cross.setFill(Paint.valueOf("#ffff"));
             btnDelete.setGraphic(cross);
 
             SVGPath bin = new SVGPath();
             bin.setContent(SVGPathIcons.bin);
-            bin.setScaleX(0.8);
-            bin.setScaleY(0.8);
-            bin.setScaleZ(0.8);
-            bin.setFill(Paint.valueOf("#AB0000"));
+            bin.setScaleX(0.7);
+            bin.setScaleY(0.7);
+            bin.setScaleZ(0.7);
+            bin.setFill(Paint.valueOf("#ffffff"));
             btnDeleteAll.setGraphic(bin);
 
             SVGPath cog = new SVGPath();
             cog.setContent(SVGPathIcons.cog);
-            cog.setScaleX(0.8);
-            cog.setScaleY(0.8);
-            cog.setScaleZ(0.8);
-            cog.setFill(Paint.valueOf("#00318C"));
+            cog.setScaleX(0.7);
+            cog.setScaleY(0.7);
+            cog.setScaleZ(0.7);
+            cog.setFill(Paint.valueOf("#ffffff"));
             btnSettings.setGraphic(cog);
 
             ImageView cube = new ImageView(new Image("res/PNGs/cube.png"));
