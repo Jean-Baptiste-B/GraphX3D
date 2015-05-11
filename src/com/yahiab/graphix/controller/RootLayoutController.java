@@ -72,6 +72,11 @@ public class RootLayoutController implements Initializable{
     }
 
     @FXML
+    public void handleHelp() {
+
+    }
+
+    @FXML
     public void handleExit() {
         System.exit(0);
     }

@@ -92,9 +92,8 @@
              <SplitPane fx:id="outerSplitPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0"
                         VBox.vgrow="ALWAYS">
               <items>
-                  <AnchorPane fx:id="selectedShapeAnchorPane" prefHeight="200.0" prefWidth="200.0" maxWidth="300"
-                              minWidth="250"
-                              style="-fx-background-color: DEECFF;">
+                  <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300" minWidth="275.0" prefHeight="200.0"
+                              prefWidth="275.0" style="-fx-background-color: DEECFF;">
                      <children>
                          <GridPane fx:id="selectedShapeGridPane" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT"
                                    AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
@@ -149,7 +148,7 @@
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="14" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
                                <Label text="Translation" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
-                                      GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                                      GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
@@ -175,22 +174,6 @@
                                    </font>
                                </Label>
                               <Label fx:id="selectedShapeD4Label" text="Dimension 4" GridPane.rowIndex="10" />
-                              <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="16">
-                                 <children>
-                                    <Label text="X" />
-                                    <Label text="Y" GridPane.columnIndex="1" />
-                                    <Label text="Z" GridPane.columnIndex="2" />
-                                 </children>
-                                 <columnConstraints>
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                              </GridPane>
                               <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="13">
                                 <columnConstraints>
                                     <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="40.0" minWidth="20.0" prefWidth="40.0" />
@@ -212,23 +195,6 @@
                                       <NumberSpinnerLight fx:id="selectedShapeCoordY" GridPane.columnIndex="3"/>
                                       <NumberSpinnerLight fx:id="selectedShapeCoordZ" GridPane.columnIndex="5"/>
                                   </children>
-                              </GridPane>
-                              <GridPane GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
-                                 <children>
-                                    <NumberSpinner fx:id="selectedShapeTranslateX" />
-                                    <NumberSpinner fx:id="selectedShapeTranslateY" GridPane.columnIndex="1" />
-                                    <NumberSpinner fx:id="selectedShapeTranslateZ" GridPane.columnIndex="2" />
-                                    <Button mnemonicParsing="false" onAction="#buttonOkTranslate" prefHeight="20.0" text="OK" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                 </children>
                               </GridPane>
                               <NumberSpinner fx:id="selectedShapeD1Field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                               <NumberSpinner fx:id="selectedShapeD2Field" GridPane.columnIndex="1" GridPane.rowIndex="8" />
@@ -288,6 +254,45 @@
                                                       GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                                    </children>
                                </GridPane>
+                               <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="17">
+                                   <columnConstraints>
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
+                                                          prefWidth="40.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
+                                                          prefWidth="40.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
+                                                          prefWidth="40.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                   </columnConstraints>
+                                   <rowConstraints>
+                                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                   </rowConstraints>
+                                   <children>
+                                       <Label text=" X : " GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                                       <Label text=" Y : " GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                                              GridPane.valignment="CENTER"/>
+                                       <Label text=" Z : " GridPane.columnIndex="4" GridPane.halignment="CENTER"
+                                              GridPane.valignment="CENTER"/>
+                                       <NumberSpinner fx:id="selectedShapeTranslateX" GridPane.columnIndex="1"
+                                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                                       <NumberSpinner fx:id="selectedShapeTranslateY" GridPane.columnIndex="3"
+                                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                                       <NumberSpinner fx:id="selectedShapeTranslateZ" GridPane.columnIndex="5"
+                                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                                       <Button mnemonicParsing="false" onAction="#buttonOkTranslate" prefHeight="20.0"
+                                               text="OK" GridPane.columnIndex="6" GridPane.halignment="CENTER"
+                                               GridPane.valignment="CENTER"/>
+                                   </children>
+                               </GridPane>
+                               <Label text="Les transformations géométriques" GridPane.columnSpan="2147483647"
+                                      GridPane.rowIndex="15">
+                                   <font>
+                                       <Font name="System Bold" size="14.0"/>
+                                   </font>
+                               </Label>
                            </children>
                         </GridPane>
                      </children>
@@ -295,7 +300,8 @@
                   <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="600.0" prefWidth="200.0">
                      <items>
                          <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
-                        <Accordion fx:id="settings" minWidth="0.0" prefHeight="600.0" prefWidth="279.0">
+                         <Accordion fx:id="settings" maxWidth="250.0" minWidth="0.0" prefHeight="600.0"
+                                    prefWidth="250.0">
                            <panes>
                                <TitledPane alignment="CENTER" animated="false" expanded="false"
                                            style="-fx-background-color: #deecff;" text="Formes 3D" fx:id="x4">

@@ -12,17 +12,17 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Ouvrir">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="L'éditeur graphique 3D"/>
-                        <MenuItem mnemonicParsing="false" text="L'éditeur graphique 2D"/>
-                        <MenuItem mnemonicParsing="false" text="Animations"/>
-                        <MenuItem mnemonicParsing="false" text="Cours et Quiz"/>
-                        <MenuItem mnemonicParsing="false" text="Patrons des formes 3D"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButton3D" text="L'éditeur graphique 3D"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButton2D" text="L'éditeur graphique 2D"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonDemos" text="Animations"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonQuiz" text="Cours et Quiz"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonPDF" text="Patrons des formes 3D"/>
                         <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quitter"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Aide"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleHelp" text="Aide"/>
                         <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="A propos"/>
                     </items>
                 </Menu>
