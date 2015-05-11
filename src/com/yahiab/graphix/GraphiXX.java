@@ -31,6 +31,9 @@ public class GraphiXX extends Application {
             Scene scene = new Scene(rootLayout);
             this.primaryStage.setScene(scene);
             this.primaryStage.setMaximized(true);
+            this.primaryStage.setOnCloseRequest(event -> {
+                System.exit(0);
+            });
             this.primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

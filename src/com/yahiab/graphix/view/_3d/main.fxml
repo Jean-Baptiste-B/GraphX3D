@@ -92,7 +92,8 @@
              <SplitPane fx:id="outerSplitPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0"
                         VBox.vgrow="ALWAYS">
               <items>
-                  <AnchorPane fx:id="selectedShapeAnchorPane" prefHeight="200.0" prefWidth="200.0"
+                  <AnchorPane fx:id="selectedShapeAnchorPane" prefHeight="200.0" prefWidth="200.0" maxWidth="300"
+                              minWidth="250"
                               style="-fx-background-color: DEECFF;">
                      <children>
                          <GridPane fx:id="selectedShapeGridPane" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT"

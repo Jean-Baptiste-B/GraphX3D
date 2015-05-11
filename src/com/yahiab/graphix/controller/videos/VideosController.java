@@ -7,6 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -24,6 +25,9 @@ public class VideosController implements Initializable {
     public MediaControl createContent(String mediaURL) {
         if (mediaPlayer != null)
             mediaPlayer.dispose();
+        String adnane = (new File(mediaURL)).getAbsolutePath();
+        System.out.println((new File(mediaURL)).getAbsolutePath());
+        System.out.println((new File(mediaURL)).getPath());
         mediaPlayer = new MediaPlayer(new Media(mediaURL));
         mediaPlayer.setAutoPlay(true);
         mediaControl = new MediaControl(mediaPlayer);
@@ -36,6 +40,7 @@ public class VideosController implements Initializable {
     @FXML
     public void playVideo1() {
         videoPane.getChildren().clear();
+        videoPane.getChildren().addAll(createContent((new File("res/videos/vid3.mp4")).getAbsolutePath()));
         videoPane.getChildren().addAll(createContent(GraphiXX.class.getResource("../../../res/videos/vid1_3d_solids.mp4").toString()));
     }
 

@@ -10,19 +10,20 @@
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Ouvrir">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit"/>
+                        <MenuItem mnemonicParsing="false" text="L'éditeur graphique 3D"/>
+                        <MenuItem mnemonicParsing="false" text="L'éditeur graphique 2D"/>
+                        <MenuItem mnemonicParsing="false" text="Animations"/>
+                        <MenuItem mnemonicParsing="false" text="Cours et Quiz"/>
+                        <MenuItem mnemonicParsing="false" text="Patrons des formes 3D"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quitter"/>
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete"/>
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About"/>
+                        <MenuItem mnemonicParsing="false" text="Aide"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="A propos"/>
                     </items>
                 </Menu>
             </menus>
