@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.SubScene?>
+<?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" minHeight="400.0" minWidth="700.0" prefHeight="400.0" prefWidth="700.0"
             xmlns="http://javafx.com/javafx/8.0.40"
             fx:controller="com.yahiab.graphix.controller._3d.NewShapeController">
@@ -35,24 +36,26 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <Label text="Dimensions initiales" GridPane.columnSpan="2147483647"
-                                       GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                <Label fx:id="newShapeDimensionLabel1" text="Dimension 1" GridPane.halignment="CENTER"
-                                       GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
-                                <Label fx:id="newShapeDimensionLabel2" text="Dimension 2" GridPane.halignment="CENTER"
-                                       GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
-                                <Label fx:id="newShapeDimensionLabel3" text="Dimension 3" GridPane.halignment="CENTER"
-                                       GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
-                                <Label fx:id="newShapeDimensionLabel4" text="Dimension 4" GridPane.halignment="CENTER"
-                                       GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
-                                <Label text="Position initiale" GridPane.columnSpan="2147483647"
-                                       GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
-                                <Label text="Coordonnée X" GridPane.halignment="CENTER" GridPane.rowIndex="6"
+                                <Label styleClass="important-title" text="Dimensions initiales"
+                                       GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
                                        GridPane.valignment="CENTER"/>
-                                <Label text="Coordonnée Y" GridPane.halignment="CENTER" GridPane.rowIndex="7"
-                                       GridPane.valignment="CENTER"/>
-                                <Label text="Coordonnée Z" GridPane.halignment="CENTER" GridPane.rowIndex="8"
-                                       GridPane.valignment="CENTER"/>
+                                <Label fx:id="newShapeDimensionLabel1" styleClass="normal-label" text="Dimension 1"
+                                       GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+                                <Label fx:id="newShapeDimensionLabel2" styleClass="normal-label" text="Dimension 2"
+                                       GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+                                <Label fx:id="newShapeDimensionLabel3" styleClass="normal-label" text="Dimension 3"
+                                       GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                                <Label fx:id="newShapeDimensionLabel4" styleClass="normal-label" text="Dimension 4"
+                                       GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
+                                <Label styleClass="important-title" text="Position initiale"
+                                       GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                                       GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+                                <Label styleClass="normal-label" text="Coordonnée X" GridPane.halignment="CENTER"
+                                       GridPane.rowIndex="6" GridPane.valignment="CENTER"/>
+                                <Label styleClass="normal-label" text="Coordonnée Y" GridPane.halignment="CENTER"
+                                       GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
+                                <Label styleClass="normal-label" text="Coordonnée Z" GridPane.halignment="CENTER"
+                                       GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
                                 <HBox alignment="CENTER" maxHeight="50.0" maxWidth="200.0" spacing="25.0"
                                       GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10"
                                       GridPane.valignment="CENTER">
@@ -125,6 +128,9 @@
                     </children>
                 </AnchorPane>
             </items>
+            <stylesheets>
+                <URL value="@viewer.css"/>
+            </stylesheets>
         </SplitPane>
     </children>
 </AnchorPane>

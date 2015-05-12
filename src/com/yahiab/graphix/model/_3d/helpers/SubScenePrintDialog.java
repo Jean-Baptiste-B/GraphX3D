@@ -28,12 +28,13 @@ public class SubScenePrintDialog extends Stage {
 
     public SubScenePrintDialog(boolean modality, String title, Node printNode) {
         super();
+        setResizable(false);
         //initOwner(owner);
         Modality m = modality ? Modality.APPLICATION_MODAL : Modality.NONE;
         initModality(m);
         setTitle(title);
         Group root = new Group();
-        Scene scene = new Scene(root, 450, 150, Color.WHITE);
+        Scene scene = new Scene(root, 350, 80, Color.WHITE);
         setScene(scene);
 
         GridPane gridpane = new GridPane();
@@ -50,7 +51,7 @@ public class SubScenePrintDialog extends Stage {
         printerProperty.bind(printerChooser.getSelectionModel().selectedItemProperty());
         gridpane.add(printerChooser, 1, 1);
 
-        Button printButton = new Button("Print");
+        Button printButton = new Button("Imprimer");
         printButton.setOnAction((ActionEvent event) -> {
             this.pageLayout = printerProperty.get().createPageLayout(
                     Paper.A4, PageOrientation.LANDSCAPE, Printer.MarginType.HARDWARE_MINIMUM);

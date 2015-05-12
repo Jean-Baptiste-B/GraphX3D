@@ -312,10 +312,12 @@ public class Main3DController implements Initializable {
 
     {
         newShapeStage.setTitle("Cr\u00e9ation param\u00e8tr\u00e9e d'une nouvelle forme 3D");
+        newShapeStage.setResizable(false);
     }
 
     {
         booleanOperationStage.setTitle("Op\u00e9rations bool\u00e9ennes entre les formes 3D");
+        booleanOperationStage.setResizable(false);
     }
 
     public static ContentModel getContentModel() {

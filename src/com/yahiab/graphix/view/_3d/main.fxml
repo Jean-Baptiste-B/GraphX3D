@@ -22,7 +22,7 @@
                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                  </rowConstraints>
                  <children>
-                     <ToolBar style="-fx-background-color: #ffffff;">
+                     <ToolBar>
                          <items>
                              <Button fx:id="btnOpenMenu" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
                                      onAction="#open" prefHeight="55.0" styleClass="topmenubutton" text="Ouvrir">
@@ -92,8 +92,7 @@
                              <Insets/>
                          </GridPane.margin>
                      </ToolBar>
-                     <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #ffffff;"
-                              GridPane.columnIndex="1">
+                     <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1">
                          <items>
                              <ToggleButton fx:id="btnSettings" contentDisplay="CENTER" maxHeight="55.0" minHeight="55.0"
                                            mnemonicParsing="false" onAction="#toggleSettings" prefHeight="55.0"
@@ -109,8 +108,7 @@
              <SplitPane fx:id="outerSplitPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0"
                         VBox.vgrow="ALWAYS">
               <items>
-                  <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300" minWidth="275.0" prefHeight="200.0"
-                              prefWidth="275.0" style="-fx-background-color: #ffffff;">
+                  <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300" minWidth="300.0">
                      <children>
                          <GridPane fx:id="selectedShapeGridPane" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT"
                                    AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
@@ -146,17 +144,21 @@
                               <RowConstraints maxHeight="27.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                               <Label text="Forme 3D sélectionnée" GridPane.columnSpan="2147483647"
-                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                               <Label styleClass="important-title" text="Forme 3D sélectionnée"
+                                      GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                                      GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
                                </Label>
-                              <Label fx:id="selectedShapeD1Label" text="Dimension 1" GridPane.rowIndex="7" />
-                              <Label fx:id="selectedShapeD2Label" text="Dimension 2" GridPane.rowIndex="8" />
-                              <Label fx:id="selectedShapeD3Label" text="Dimension 3" GridPane.rowIndex="9" />
-                               <Label text="Dimensions de la forme 3D" GridPane.columnSpan="2147483647"
-                                      GridPane.rowIndex="6">
+                               <Label fx:id="selectedShapeD1Label" styleClass="normal-label" text="Dimension 1"
+                                      GridPane.rowIndex="7"/>
+                               <Label fx:id="selectedShapeD2Label" styleClass="normal-label" text="Dimension 2"
+                                      GridPane.rowIndex="8"/>
+                               <Label fx:id="selectedShapeD3Label" styleClass="normal-label" text="Dimension 3"
+                                      GridPane.rowIndex="9"/>
+                               <Label styleClass="important-title" text="Dimensions de la forme 3D"
+                                      GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
@@ -164,33 +166,37 @@
                               <ColorPicker fx:id="selectedShapeColorPicker" promptText="Color" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="14" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
-                               <Label text="Translation" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
-                                      GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                               <Label styleClass="important-title" text="Translation" GridPane.columnSpan="2147483647"
+                                      GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
                                </Label>
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="21" />
-                               <Label text="Changement d'échelle" GridPane.columnSpan="2147483647"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                               <Label styleClass="important-title" text="Changement d'échelle"
+                                      GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                                      GridPane.rowIndex="22" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
                                </Label>
                               <TextField fx:id="selectedShapeTypeLabel" editable="false" text="type..." GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
-                               <Label text="Position" GridPane.columnSpan="2147483647" GridPane.rowIndex="12">
+                               <Label styleClass="important-title" text="Position" GridPane.columnSpan="2147483647"
+                                      GridPane.rowIndex="12">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
                                </Label>
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="11" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="18" />
-                               <Label text="Rotation" GridPane.columnSpan="2147483647" GridPane.rowIndex="19">
+                               <Label styleClass="important-title" text="Rotation" GridPane.columnSpan="2147483647"
+                                      GridPane.rowIndex="19">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
                                </Label>
-                              <Label fx:id="selectedShapeD4Label" text="Dimension 4" GridPane.rowIndex="10" />
+                               <Label fx:id="selectedShapeD4Label" styleClass="normal-label" text="Dimension 4"
+                                      GridPane.rowIndex="10"/>
                               <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="13">
                                 <columnConstraints>
                                     <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="40.0" minWidth="20.0" prefWidth="40.0" />
@@ -238,10 +244,10 @@
                                     <NumberSpinner fx:id="selectedShapeScaleZ" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                               <Label text="Identifiant" GridPane.rowIndex="2"/>
+                               <Label styleClass="normal-label" text="Identifiant" GridPane.rowIndex="2"/>
                               <TextField fx:id="selectedShapeID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="Type" GridPane.rowIndex="1" />
-                               <Label text="Couleur" GridPane.rowIndex="3"/>
+                               <Label styleClass="normal-label" text="Type" GridPane.rowIndex="1"/>
+                               <Label styleClass="normal-label" text="Couleur" GridPane.rowIndex="3"/>
                                <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="20">
                                    <columnConstraints>
                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
@@ -282,7 +288,8 @@
                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
                                                           prefWidth="40.0"/>
                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0"
+                                                          prefWidth="50.0"/>
                                    </columnConstraints>
                                    <rowConstraints>
                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
@@ -304,8 +311,8 @@
                                                GridPane.valignment="CENTER"/>
                                    </children>
                                </GridPane>
-                               <Label text="Les transformations géométriques" GridPane.columnSpan="2147483647"
-                                      GridPane.rowIndex="15">
+                               <Label styleClass="important-title" text="Transformations géométriques"
+                                      GridPane.columnSpan="2147483647" GridPane.rowIndex="15">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
@@ -317,17 +324,14 @@
                   <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="600.0" prefWidth="200.0">
                      <items>
                          <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
-                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0"
-                                    prefWidth="250.0" style="-fx-background-color: #ffffff;">
+                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0" prefWidth="240">
                            <panes>
                                <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"
                                            fx:id="x4">
                                  <content>
-                                     <ScrollPane style="-fx-background-color: #ffffff;">
+                                     <ScrollPane>
                                          <content>
-                                             <GridPane alignment="CENTER" hgap="5.0"
-                                                       style="-fx-background-color: #ffffff;" styleClass="settings"
-                                                       vgap="5.0">
+                                             <GridPane alignment="CENTER" hgap="5.0" styleClass="settings" vgap="5.0">
                                                  <children>
                                                      <Label alignment="CENTER" text="Formes 3D"
                                                             GridPane.columnSpan="2147483647">
@@ -436,7 +440,7 @@
                               </TitledPane>
                                <TitledPane animated="false" text="Opérations booléennes">
                                    <content>
-                                       <GridPane style="-fx-background-color: DEECFF;">
+                                       <GridPane>
                                            <columnConstraints>
                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
@@ -487,18 +491,14 @@
                                                        GridPane.columnIndex="1" GridPane.halignment="CENTER"
                                                        GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
                                                <TreeTableView fx:id="CSGModeTreeTable" prefHeight="200.0"
-                                                              prefWidth="200.0" style="-fx-background-color: F2F8FF;"
-                                                              GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                                              prefWidth="200.0" GridPane.columnSpan="2147483647"
+                                                              GridPane.rowIndex="2">
                                                    <columns>
                                                        <TreeTableColumn fx:id="CSGShapeColumn" prefWidth="75.0"
-                                                                        style="-fx-background-color: #F2F8FF;"
                                                                         text="Forme 3D"/>
                                                        <TreeTableColumn fx:id="CSGVisibilityColumn" prefWidth="75.0"
-                                                                        style="-fx-background-color: #F2F8FF;"
                                                                         text="Visibilité"/>
-                                                       <TreeTableColumn fx:id="CSGShapeID" prefWidth="75.0"
-                                                                        style="-fx-background-color: #F2F8FF;"
-                                                                        text="ID"/>
+                                                       <TreeTableColumn fx:id="CSGShapeID" prefWidth="75.0" text="ID"/>
                                                    </columns>
                                                </TreeTableView>
                                            </children>
@@ -507,8 +507,7 @@
                               </TitledPane>
                                <TitledPane animated="false" text="Paramètres de la scène">
                                    <content>
-                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"
-                                                   style="-fx-background-color: #DEECFF;">
+                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                            <children>
                                                <GridPane layoutX="1.0" layoutY="175.0" AnchorPane.bottomAnchor="50.0"
                                                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
@@ -535,7 +534,7 @@
                                                        <Label text="Afficher les axes"/>
                                                        <CheckBox fx:id="showAxisCheckBox" mnemonicParsing="false"
                                                                  selected="true" text="" GridPane.columnIndex="1"/>
-                                                       <Label text="Couleur de l'arrière-plan" GridPane.rowIndex="1"/>
+                                                       <Label text="Arrière-plan" GridPane.rowIndex="1"/>
                                                        <ColorPicker fx:id="backgroundColorPicker"
                                                                     GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                                                        <Label text="Zoom" GridPane.rowIndex="2"/>
@@ -700,21 +699,16 @@
                                <TitledPane animated="false" expanded="true" text="Hièrarchie de la scène" fx:id="x5">
                                  <content>
                                      <TreeTableView fx:id="hierarachyTreeTable" editable="true" prefHeight="200.0"
-                                                    prefWidth="200.0" style="-fx-background-color: F2F8FF;">
+                                                    prefWidth="200.0">
                                        <columns>
                                            <TreeTableColumn fx:id="nodeColumn" editable="false" prefWidth="75.0"
-                                                            sortable="false" style="-fx-background-color: F2F8FF;"
-                                                            text="Forme 3D"/>
-                                           <TreeTableColumn fx:id="visibilityColumn" editable="true"
-                                                            style="-fx-background-color: F2F8FF;" text="Visibilité"/>
+                                                            sortable="false" text="Forme 3D"/>
+                                           <TreeTableColumn fx:id="visibilityColumn" editable="true" text="Visibilité"/>
                                            <TreeTableColumn fx:id="idColumn" editable="false" prefWidth="75.0"
-                                                            style="-fx-background-color: F2F8FF;" text="ID"/>
-                                           <TreeTableColumn fx:id="widthColumn" editable="false"
-                                                            style="-fx-background-color: F2F8FF;" text="Largeur"/>
-                                           <TreeTableColumn fx:id="heightColumn" editable="false"
-                                                            style="-fx-background-color: F2F8FF;" text="Hauteur"/>
-                                           <TreeTableColumn fx:id="depthColumn" editable="false"
-                                                            style="-fx-background-color: F2F8FF;" text="Profondeur"/>
+                                                            text="ID"/>
+                                           <TreeTableColumn fx:id="widthColumn" editable="false" text="Largeur"/>
+                                           <TreeTableColumn fx:id="heightColumn" editable="false" text="Hauteur"/>
+                                           <TreeTableColumn fx:id="depthColumn" editable="false" text="Profondeur"/>
                                        </columns>
                                     </TreeTableView>
                                  </content>
@@ -725,7 +719,7 @@
                   </SplitPane>
               </items>
             </SplitPane>
-             <ToolBar id="statusBar" style="-fx-background-color: #ffffff;" styleClass="bottom">
+             <ToolBar id="statusBar" styleClass="bottom">
              <items>
                  <Label fx:id="statusNumberOfNodes" text="Label"/>
                  <Label fx:id="statusSelectedShape" text="Label"/>

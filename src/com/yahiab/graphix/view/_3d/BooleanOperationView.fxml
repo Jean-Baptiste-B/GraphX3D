@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.*?>
+<?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0"
             minWidth="700.0" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40"
             fx:controller="com.yahiab.graphix.controller._3d.BooleanOperationController">
@@ -52,6 +53,9 @@
                             minWidth="620.0" prefHeight="300.0" prefWidth="620.0" GridPane.halignment="CENTER"
                             GridPane.valignment="CENTER"/>
             </children>
+            <stylesheets>
+                <URL value="@viewer.css"/>
+            </stylesheets>
         </GridPane>
     </children>
 </AnchorPane>

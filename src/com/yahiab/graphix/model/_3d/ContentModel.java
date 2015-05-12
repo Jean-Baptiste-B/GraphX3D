@@ -345,7 +345,7 @@ public class ContentModel implements Initializable {
 
         SubScene subScene = new SubScene(root3D, 800, 600, true, SceneAntialiasing.BALANCED);
         this.subScene.set(subScene);
-        subScene.setFill(Color.CORAL);
+        subScene.setFill(Color.valueOf("#f2f2f2"));
         subScene.setCamera(camera);
         // SCENE EVENT HANDLING FOR CAMERA NAV
         subScene.addEventHandler(MouseEvent.ANY, mouseEventHandler);
@@ -465,14 +465,11 @@ public class ContentModel implements Initializable {
         double length = 300.0;
         double width = 1.0;
         double radius = 2.0;
-        final PhongMaterial redMaterial = new PhongMaterial();
-        redMaterial.setDiffuseColor(Color.DARKRED);
+        final PhongMaterial redMaterial = new PhongMaterial(Color.RED);
         redMaterial.setSpecularColor(Color.RED);
-        final PhongMaterial greenMaterial = new PhongMaterial();
-        greenMaterial.setDiffuseColor(Color.DARKGREEN);
+        final PhongMaterial greenMaterial = new PhongMaterial(Color.GREEN);
         greenMaterial.setSpecularColor(Color.GREEN);
-        final PhongMaterial blueMaterial = new PhongMaterial();
-        blueMaterial.setDiffuseColor(Color.DARKBLUE);
+        final PhongMaterial blueMaterial = new PhongMaterial(Color.BLUE);
         blueMaterial.setSpecularColor(Color.BLUE);
 
         xSphere = new Sphere(radius);
@@ -514,14 +511,11 @@ public class ContentModel implements Initializable {
 
         double width = 2.0;
         double radius = 20.0;
-        final PhongMaterial redMaterial = new PhongMaterial();
-        redMaterial.setDiffuseColor(Color.DARKRED);
+        final PhongMaterial redMaterial = new PhongMaterial(Color.RED);
         redMaterial.setSpecularColor(Color.RED);
-        final PhongMaterial greenMaterial = new PhongMaterial();
-        greenMaterial.setDiffuseColor(Color.DARKGREEN);
+        final PhongMaterial greenMaterial = new PhongMaterial(Color.GREEN);
         greenMaterial.setSpecularColor(Color.GREEN);
-        final PhongMaterial blueMaterial = new PhongMaterial();
-        blueMaterial.setDiffuseColor(Color.DARKBLUE);
+        final PhongMaterial blueMaterial = new PhongMaterial(Color.BLUE);
         blueMaterial.setSpecularColor(Color.BLUE);
 
         selectedShapeXSphere = new Sphere(radius);

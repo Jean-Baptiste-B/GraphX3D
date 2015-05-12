@@ -45,7 +45,7 @@
 
 /**** slider ***********/
 .slider .track {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
     -fx-background-radius: 0.5em;
     -fx-padding: 0.4em;
 }
@@ -65,7 +65,7 @@
 
 .check-box > .box {
     -fx-background-radius: 0;
-    -fx-background-color: #DF5B5B, #34383B;
+    -fx-background-color: #0070d6, #d3ddff;
     -fx-background-insets: 0, 2;
     -fx-pref-width: 21;
     -fx-pref-height: 21;
@@ -76,8 +76,8 @@
 }
 
 .check-box > .box > .mark {
-    -fx-mark-highlight-color: #DF5B5B;
-    -fx-mark-color: #DF5B5B;
+    -fx-mark-highlight-color: #0070d6;
+    -fx-mark-color: #0070d6;
     -fx-scale-shape: true;
     -fx-shape: "M 4.023 10.8633 L 4.0259 10.9843 L 11.9863 2.9926 L 10.1048 -0.014 L 4.0049 7.9774 L 1.3589 5.9741 L -0.0884 8.0153 L 4.023 10.8633 Z";
     -fx-pref-width: 12px;
@@ -85,13 +85,13 @@
 }
 
 .check-box:selected .mark {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
 }
 
 /********************************** scroll bar *********************/
 
 .scroll-bar:horizontal {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
     -fx-background-radius: 0;
     -fx-padding: 0;
     -fx-background-insets: 0;
@@ -119,7 +119,7 @@
 }
 
 .scroll-bar:vertical {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
     -fx-background-radius: 0;
     -fx-padding: 0;
     -fx-background-insets: 0;
@@ -153,12 +153,12 @@
 
 .scroll-bar > .increment-button:hover > .increment-arrow,
 .scroll-bar > .decrement-button:hover > .decrement-arrow {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
 }
 
 .scroll-bar > .increment-button:pressed > .increment-arrow,
 .scroll-bar > .decrement-button:pressed > .decrement-arrow {
-    -fx-background-color: #DF5B5B;
+    -fx-background-color: #0070d6;
 }
 
 .scroll-bar .thumb:pressed {
@@ -194,7 +194,7 @@
 }
 */
 /***************** menu-bar ********************/
-
+/*
 .menu-bar {
     -fx-background-color: #913B3B, #DF5B5B;
 }
@@ -223,13 +223,14 @@
     -fx-background: #913B3B;
     -fx-background-color: #913B3B;
 }
+*/
 
 /***************** titled pane *********************/
 
 .titled-pane {
-    -fx-mark-color: #913B3B;
+    -fx-mark-color: #0055aa;
     -fx-mark-highlight-color: transparent;
-    -fx-text-fill: #FFFEFE;
+    -fx-text-fill: #ffffff;
 }
 
 .titled-pane:focused > .title > .arrow-button > .arrow {
@@ -238,12 +239,12 @@
 }
 
 .titled-pane > .title {
-    -fx-background-color: #913B3B, #DF5B5B;
+    -fx-background-color: #0055aa, #0070d6;
     -fx-background-insets: 0, 1 0 0 0;
 }
 
 .titled-pane > .title:hover {
-    -fx-background-color: #913B3B, derive(#DF5B5B, -10%);
+    -fx-background-color: #0055aa, derive(#0070d6, -10%);
 }
 
 .context-menu {
@@ -253,7 +254,7 @@
 /************************************************************/
 
 .borders {
-    -fx-border-color: #DF5B5B;
+    -fx-border-color: #0070d6;
     -fx-border-style: dotted;
     -fx-border-width: 5;
     -fx-border-insets: -2;
@@ -268,4 +269,16 @@
     -fx-selection-bar: #913B3B;
     -fx-selection-bar-non-focused: derive(#913B3B, 20%);
     */
+}
+
+.important-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0055aa;
+}
+
+.normal-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
 }
