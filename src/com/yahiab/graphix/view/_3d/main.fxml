@@ -108,7 +108,7 @@
              <SplitPane fx:id="outerSplitPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0"
                         VBox.vgrow="ALWAYS">
               <items>
-                  <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300" minWidth="300.0">
+                  <AnchorPane fx:id="selectedShapeAnchorPane" maxWidth="300.0" minWidth="300.0">
                      <children>
                          <GridPane fx:id="selectedShapeGridPane" alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT"
                                    AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"
@@ -307,8 +307,8 @@
                                        <NumberSpinner fx:id="selectedShapeTranslateZ" GridPane.columnIndex="5"
                                                       GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                                        <Button mnemonicParsing="false" onAction="#buttonOkTranslate" prefHeight="20.0"
-                                               text="OK" GridPane.columnIndex="6" GridPane.halignment="CENTER"
-                                               GridPane.valignment="CENTER"/>
+                                               styleClass="custombutton" text="OK" GridPane.columnIndex="6"
+                                               GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                                    </children>
                                </GridPane>
                                <Label styleClass="important-title" text="Transformations géométriques"
@@ -324,7 +324,8 @@
                   <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="600.0" prefWidth="200.0">
                      <items>
                          <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
-                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0" prefWidth="240">
+                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0"
+                                    prefWidth="240.0">
                            <panes>
                                <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"
                                            fx:id="x4">
@@ -467,37 +468,42 @@
                                                          text="Activer les opérations booléennes"
                                                          GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
                                                          GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
-                                               <Label text="Type de l'opération booléenne"
+                                               <Label styleClass="important-title" text="Type de l'opération"
                                                       GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
                                                       GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
-                                               <Label text="Union" GridPane.halignment="CENTER" GridPane.rowIndex="5"
+                                               <Label styleClass="normal-label" text="Union"
+                                                      GridPane.halignment="CENTER" GridPane.rowIndex="5"
                                                       GridPane.valignment="CENTER"/>
-                                               <Label text="Intersection" GridPane.halignment="CENTER"
-                                                      GridPane.rowIndex="6" GridPane.valignment="CENTER"/>
-                                               <Label text="Différence" GridPane.halignment="CENTER"
-                                                      GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
+                                               <Label styleClass="normal-label" text="Intersection"
+                                                      GridPane.halignment="CENTER" GridPane.rowIndex="6"
+                                                      GridPane.valignment="CENTER"/>
+                                               <Label styleClass="normal-label" text="Différence"
+                                                      GridPane.halignment="CENTER" GridPane.rowIndex="7"
+                                                      GridPane.valignment="CENTER"/>
                                                <Separator prefWidth="200.0" GridPane.columnSpan="2147483647"
                                                           GridPane.rowIndex="3"/>
-                                               <Button fx:id="CSGUnionButton" mnemonicParsing="false"
-                                                       onAction="#btnUnion" text="Union" GridPane.columnIndex="1"
+                                               <Button fx:id="CSGUnionButton" maxWidth="90.0" minWidth="80.0"
+                                                       mnemonicParsing="false" onAction="#btnUnion" prefWidth="80.0"
+                                                       styleClass="custombutton" text="Union" GridPane.columnIndex="1"
                                                        GridPane.halignment="CENTER" GridPane.rowIndex="5"
                                                        GridPane.valignment="CENTER"/>
-                                               <Button fx:id="CSGIntersectionButton" mnemonicParsing="false"
-                                                       onAction="#btnIntersection" text="Intersection"
+                                               <Button fx:id="CSGIntersectionButton" maxWidth="90.0" minWidth="80.0"
+                                                       mnemonicParsing="false" onAction="#btnIntersection"
+                                                       prefWidth="80.0" styleClass="custombutton" text="Intersection"
                                                        GridPane.columnIndex="1" GridPane.halignment="CENTER"
                                                        GridPane.rowIndex="6" GridPane.valignment="CENTER"/>
-                                               <Button fx:id="CSGDifferenceButton" mnemonicParsing="false"
-                                                       onAction="#btnDifference" text="Différence"
+                                               <Button fx:id="CSGDifferenceButton" maxWidth="90.0" minWidth="80.0"
+                                                       mnemonicParsing="false" onAction="#btnDifference"
+                                                       prefWidth="80.0" styleClass="custombutton" text="Différence"
                                                        GridPane.columnIndex="1" GridPane.halignment="CENTER"
                                                        GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
                                                <TreeTableView fx:id="CSGModeTreeTable" prefHeight="200.0"
                                                               prefWidth="200.0" GridPane.columnSpan="2147483647"
                                                               GridPane.rowIndex="2">
                                                    <columns>
-                                                       <TreeTableColumn fx:id="CSGShapeColumn" prefWidth="75.0"
+                                                       <TreeTableColumn fx:id="CSGShapeColumn" maxWidth="200.0"
+                                                                        minWidth="120.0" prefWidth="120.0"
                                                                         text="Forme 3D"/>
-                                                       <TreeTableColumn fx:id="CSGVisibilityColumn" prefWidth="75.0"
-                                                                        text="Visibilité"/>
                                                        <TreeTableColumn fx:id="CSGShapeID" prefWidth="75.0" text="ID"/>
                                                    </columns>
                                                </TreeTableView>
@@ -531,13 +537,15 @@
                                                                        vgrow="SOMETIMES"/>
                                                    </rowConstraints>
                                                    <children>
-                                                       <Label text="Afficher les axes"/>
+                                                       <Label styleClass="normal-label" text="Afficher les axes"/>
                                                        <CheckBox fx:id="showAxisCheckBox" mnemonicParsing="false"
                                                                  selected="true" text="" GridPane.columnIndex="1"/>
-                                                       <Label text="Arrière-plan" GridPane.rowIndex="1"/>
+                                                       <Label styleClass="normal-label" text="Arrière-plan"
+                                                              GridPane.rowIndex="1"/>
                                                        <ColorPicker fx:id="backgroundColorPicker"
                                                                     GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                                                       <Label text="Zoom" GridPane.rowIndex="2"/>
+                                                       <Label styleClass="normal-label" text="Zoom"
+                                                              GridPane.rowIndex="2"/>
                                                        <Slider fx:id="fovSlider" majorTickUnit="40.0" max="180.0"
                                                                min="0.0" minorTickCount="4" showTickLabels="true"
                                                                showTickMarks="true" GridPane.columnIndex="1"
@@ -558,72 +566,81 @@
                                                                fx:id="x31"/>
                                                    </padding>
                                                    <children>
-                                                       <Label text="Couleur : " GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="2"/>
+                                                       <Label styleClass="normal-label" text="Couleur : "
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                                                        <Label maxWidth="1.7976931348623157E308"
-                                                              styleClass="settings-header" text="Lumière ambiente"
+                                                              styleClass="important-title" text="Lumière ambiente"
                                                               GridPane.columnIndex="0" GridPane.columnSpan="2147483647"
-                                                              GridPane.hgrow="ALWAYS" GridPane.rowIndex="0"/>
+                                                              GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                                                              GridPane.rowIndex="0" GridPane.valignment="CENTER"/>
                                                        <ColorPicker fx:id="ambientColorPicker" GridPane.columnIndex="1"
                                                                     GridPane.rowIndex="2"/>
-                                                       <Label text="Activée" GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="1"/>
+                                                       <Label styleClass="normal-label" text="Activée"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="1"/>
                                                        <CheckBox fx:id="ambientEnableCheckbox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="1"/>
-                                                       <Label text="Couleur : " GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="5"/>
+                                                       <Label styleClass="normal-label" text="Couleur : "
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="5"/>
                                                        <ColorPicker id="ambientColorPicker" fx:id="light1ColorPicker"
                                                                     GridPane.columnIndex="1" GridPane.rowIndex="5"/>
                                                        <Label maxWidth="1.7976931348623157E308"
-                                                              styleClass="settings-header" text="Lumière 1 (Camera)"
+                                                              styleClass="important-title" text="Lumière 1 (Camera)"
                                                               GridPane.columnIndex="0" GridPane.columnSpan="2"
-                                                              GridPane.hgrow="ALWAYS" GridPane.rowIndex="3"/>
-                                                       <Label text="Activée" GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="4"/>
+                                                              GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                                                              GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                                                       <Label styleClass="normal-label" text="Activée"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="4"/>
                                                        <CheckBox fx:id="light1EnabledCheckBox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="4"/>
-                                                       <Label text="Vérouiller à la camera" GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="6"/>
+                                                       <Label styleClass="normal-label" text="Vérouiller à la camera"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="6"/>
                                                        <CheckBox fx:id="light1followCameraCheckBox"
                                                                  mnemonicParsing="false" selected="true" text=""
                                                                  GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-                                                       <Label text="X" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                                                       <Label styleClass="normal-label" text="X"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="7"/>
                                                        <Slider fx:id="light1x" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-                                                       <Label text="Y" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                                                       <Label styleClass="normal-label" text="Y"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="8"/>
                                                        <Slider fx:id="light1y" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="8"/>
-                                                       <Label text="Z" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+                                                       <Label styleClass="normal-label" text="Z"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="9"/>
                                                        <Slider fx:id="light1z" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="9"/>
                                                        <Label maxWidth="1.7976931348623157E308"
-                                                              styleClass="settings-header" text="Lumière 2"
+                                                              styleClass="important-title" text="Lumière 2"
                                                               GridPane.columnIndex="0" GridPane.columnSpan="2"
-                                                              GridPane.hgrow="ALWAYS" GridPane.rowIndex="10"/>
-                                                       <Label text="Activée" GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="11"/>
+                                                              GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                                                              GridPane.rowIndex="10" GridPane.valignment="CENTER"/>
+                                                       <Label styleClass="normal-label" text="Activée"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="11"/>
                                                        <CheckBox fx:id="light2EnabledCheckBox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="11"/>
-                                                       <Label text="X" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+                                                       <Label styleClass="normal-label" text="X"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="13"/>
                                                        <Slider fx:id="light2x" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="13"/>
-                                                       <Label text="Y" GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+                                                       <Label styleClass="normal-label" text="Y"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="14"/>
                                                        <Slider fx:id="light2y" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="14"/>
-                                                       <Label text="Z" GridPane.columnIndex="0" GridPane.rowIndex="15"/>
+                                                       <Label styleClass="normal-label" text="Z"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="15"/>
                                                        <Slider fx:id="light2z" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
@@ -631,9 +648,10 @@
                                                        <Label maxWidth="1.7976931348623157E308"
                                                               styleClass="settings-header" text="Lumière 3"
                                                               GridPane.columnIndex="0" GridPane.columnSpan="2"
-                                                              GridPane.hgrow="ALWAYS" GridPane.rowIndex="16"/>
-                                                       <Label text="Activée" GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="17"/>
+                                                              GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                                                              GridPane.rowIndex="16" GridPane.valignment="CENTER"/>
+                                                       <Label styleClass="normal-label" text="Activée"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="17"/>
                                                        <CheckBox fx:id="light3EnabledCheckBox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="17"/>
@@ -642,22 +660,24 @@
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="19"/>
-                                                       <Label text="Y" GridPane.columnIndex="0" GridPane.rowIndex="20"/>
+                                                       <Label styleClass="normal-label" text="Y"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="20"/>
                                                        <Slider fx:id="light3y" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="20"/>
-                                                       <Label text="Z" GridPane.columnIndex="0" GridPane.rowIndex="21"/>
+                                                       <Label styleClass="normal-label" text="Z"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="21"/>
                                                        <Slider fx:id="light3z" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="21"/>
-                                                       <Label text="Couleur : " GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="12"/>
+                                                       <Label styleClass="normal-label" text="Couleur : "
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="12"/>
                                                        <ColorPicker fx:id="light2ColorPicker" GridPane.columnIndex="1"
                                                                     GridPane.rowIndex="12"/>
-                                                       <Label text="Couleur : " GridPane.columnIndex="0"
-                                                              GridPane.rowIndex="18"/>
+                                                       <Label styleClass="normal-label" text="Couleur : "
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="18"/>
                                                        <ColorPicker fx:id="light3ColorPicker" GridPane.columnIndex="1"
                                                                     GridPane.rowIndex="18"/>
                                                    </children>

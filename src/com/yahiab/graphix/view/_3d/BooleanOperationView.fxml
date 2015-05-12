@@ -29,9 +29,9 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                     </rowConstraints>
                     <children>
-                        <Button defaultButton="true" mnemonicParsing="false" onAction="#btnOKBooleanOperationResult"
-                                text="Ajouter le résultat de l'opération" GridPane.columnIndex="2"
-                                GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                        <Button mnemonicParsing="false" onAction="#btnOKBooleanOperationResult"
+                                styleClass="custombutton" text="Ajouter le résultat de l'opération"
+                                GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                         <Slider fx:id="booleanOperationZoomSlider" blockIncrement="1.0" majorTickUnit="250.0"
                                 max="2000.0" maxHeight="50.0" maxWidth="200.0" prefHeight="50.0" prefWidth="100.0"
                                 showTickLabels="true" showTickMarks="true" value="500.0" GridPane.columnIndex="1"
@@ -43,8 +43,9 @@
                             </GridPane.margin>
                             <children>
                                 <Button fx:id="btnPause" alignment="CENTER" mnemonicParsing="false"
-                                        onAction="#pauseAnimation"/>
-                                <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#playAnimation"/>
+                                        onAction="#pauseAnimation" styleClass="custombutton"/>
+                                <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#playAnimation"
+                                        styleClass="custombutton"/>
                             </children>
                         </HBox>
                     </children>

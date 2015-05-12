@@ -25,6 +25,8 @@ import javafx.beans.binding.ObjectBinding;
 import javafx.beans.binding.StringBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableFloatArray;
 import javafx.embed.swing.SwingFXUtils;
@@ -54,6 +56,7 @@ import javafx.scene.transform.Scale;
 import javafx.scene.transform.Transform;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.util.Duration;
 import javafx.util.Pair;
 import javafx.util.StringConverter;
@@ -184,8 +187,6 @@ public class Main3DController implements Initializable {
     private TreeTableView<Node> CSGModeTreeTable;
     @FXML
     private TreeTableColumn<Node, String> CSGShapeColumn;
-    @FXML
-    private TreeTableColumn<Node, Boolean> CSGVisibilityColumn;
     @FXML
     private TreeTableColumn<Node, String> CSGShapeID;
     @FXML
@@ -729,32 +730,32 @@ public class Main3DController implements Initializable {
 
                         if (CSGModeCheckBox.isSelected()) {
 
-                            if (CSGselectedShapesList.get().getChildren().contains(intersectedNode) == false) {
-                                if (intersectedNode instanceof CapsuleMesh) {
-                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                    alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
-                                    alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
-                                    alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Capsules\" ne sont pas sopport\u00e9es.");
-                                    alert.showAndWait();
-                                } else if (intersectedNode instanceof SpheroidMesh) {
-                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                    alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
-                                    alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
-                                    alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Sph\u00e8roides\" ne sont pas sopport\u00e9es.");
-                                    alert.showAndWait();
-                                } else if (intersectedNode instanceof SpringMesh) {
-                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                    alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
-                                    alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
-                                    alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"H\u00e9lices\" ne sont pas sopport\u00e9es");
-                                    alert.showAndWait();
-                                } else if (intersectedNode instanceof TorusMesh) {
-                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                    alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
-                                    alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
-                                    alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Torus\" ne sont pas sopport\u00e9es");
-                                    alert.showAndWait();
-                                } else {
+                            if (intersectedNode instanceof CapsuleMesh) {
+                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
+                                alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
+                                alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Capsules\" ne sont pas sopport\u00e9es.");
+                                alert.showAndWait();
+                            } else if (intersectedNode instanceof SpheroidMesh) {
+                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
+                                alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
+                                alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Sph\u00e8roides\" ne sont pas sopport\u00e9es.");
+                                alert.showAndWait();
+                            } else if (intersectedNode instanceof SpringMesh) {
+                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
+                                alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
+                                alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"H\u00e9lices\" ne sont pas sopport\u00e9es");
+                                alert.showAndWait();
+                            } else if (intersectedNode instanceof TorusMesh) {
+                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setTitle("Op\u00e9ration bool\u00e9enne non sopport\u00e9e");
+                                alert.setHeaderText("Op\u00e9ration bool\u00e9nne non sopport\u00e9e pour le moment");
+                                alert.setContentText("Pour le moment, les op\u00e9rations bool\u00e9nnes comprenant des formes 3D de type \"Torus\" ne sont pas sopport\u00e9es");
+                                alert.showAndWait();
+                            } else {
+                                if (!CSGselectedShapesList.get().getChildren().contains(intersectedNode)) {
                                     CSGselectedShapesList.get().getChildren().addAll(cloneShape((Shape3D) intersectedNode));
                                 }
                             }
@@ -910,10 +911,14 @@ public class Main3DController implements Initializable {
 
             CSGShapeColumn.setCellValueFactory(p -> p.getValue().valueProperty().asString());
             CSGShapeID.setCellValueFactory(p -> p.getValue().getValue().idProperty());
-            CSGVisibilityColumn.setCellValueFactory(p -> p.getValue().getValue().visibleProperty());
-            CSGVisibilityColumn.setCellFactory(CheckBoxTreeTableCell.forTreeTableColumn(CSGVisibilityColumn));
 
-            nodeColumn.setCellValueFactory(p -> p.getValue().valueProperty().asString());
+            //nodeColumn.setCellValueFactory(p -> p.getValue().valueProperty().asString());
+            nodeColumn.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Node, String>, ObservableValue<String>>() {
+                @Override
+                public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Node, String> param) {
+                    return new SimpleStringProperty(shapeName(param.getValue().getValue()));
+                }
+            });
             idColumn.setCellValueFactory(p -> p.getValue().getValue().idProperty());
             visibilityColumn.setCellValueFactory(p -> p.getValue().getValue().visibleProperty());
             visibilityColumn.setCellFactory(CheckBoxTreeTableCell.forTreeTableColumn(visibilityColumn));
@@ -2299,22 +2304,24 @@ public class Main3DController implements Initializable {
 
     private CSG CSGOperation(Group shapesList, CSGBooleanOperation operation) {
         List<CSG> CSGList = new ArrayList<>();
-        CSG first = convertShapeToCSG((Shape3D) shapesList.getChildren().get(0));
-        shapesList.getChildren().remove(0);
 
-        for (Node shape : shapesList.getChildren())
+        for (Node shape : shapesList.getChildren()) {
             CSGList.add(convertShapeToCSG((Shape3D) shape));
+        }
+
+        CSG first = CSGList.get(0);
+        int lastIndex = CSGList.size();
 
         CSG result = null;
         switch (operation) {
             case UNION:
-                result = first.union(CSGList);
+                result = first.union(CSGList.subList(1, lastIndex));
                 break;
             case INTERSECTION:
-                result = first.intersect(CSGList);
+                result = first.intersect(CSGList.subList(1, lastIndex));
                 break;
             case DIFFERENCE:
-                result = first.difference(CSGList);
+                result = first.difference(CSGList.subList(1, lastIndex));
         }
         contentModel.setCSGContent(result);
         return result;
@@ -2353,9 +2360,11 @@ public class Main3DController implements Initializable {
         CSGModeCheckBox.setSelected(false);
     }
 
-    private String shapeName(Shape3D shape) {
+    private String shapeName(Node shape) {
         if (shape == null)
             return "Aucune forme";
+        else if (shape instanceof Group)
+            return "Groupe";
         else if (shape instanceof CubeMesh)
             return "Cube";
         else if (shape instanceof Box)
@@ -2416,6 +2425,7 @@ public class Main3DController implements Initializable {
                     getChildren().add(new TreeItemImpl(n));
                 }
             }
+            this.setExpanded(true);
             node.setOnMouseClicked(t -> {
                 TreeItem<Node> parent = getParent();
                 while (parent != null) {
@@ -2438,6 +2448,7 @@ public class Main3DController implements Initializable {
                     getChildren().add(new CSGTreeItemImpl(n));
                 }
             }
+            this.setExpanded(true);
             node.setOnMouseClicked(t -> {
                 TreeItem<Node> parent = getParent();
                 while (parent != null) {

@@ -656,6 +656,7 @@ public class NewShapeController implements Initializable {
         play.setScaleX(0.4);
         play.setScaleY(0.4);
         play.setScaleZ(0.4);
+        play.setFill(Color.WHITE);
         btnPlay.setGraphic(play);
 
         SVGPath pause = new SVGPath();
@@ -663,6 +664,7 @@ public class NewShapeController implements Initializable {
         pause.setScaleX(0.4);
         pause.setScaleY(0.4);
         pause.setScaleZ(0.4);
+        pause.setFill(Color.WHITE);
         btnPause.setGraphic(pause);
     }
 }

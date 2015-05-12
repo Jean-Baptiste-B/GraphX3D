@@ -7,7 +7,6 @@
         <option name="description" value="GraphX3D, a 3D graphics editor for kids, with 3D printing, and more features." />
         <option name="height" value="600" />
         <option name="htmlParamFile" value="" />
-        <option name="nativeBundle" value="all" />
         <option name="paramFile" value="" />
         <option name="title" value="GraphX3D" />
         <option name="vendor" value="Team 21" />
@@ -17,6 +16,12 @@
     <root id="root">
       <element id="archive" name="GraphX3D.jar">
         <element id="module-output" name="GraphX3D" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="file-copy" path="$PROJECT_DIR$/lib/PDFRenderer-0.9.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/poly2tri-core-0.1.0-SNAPSHOT.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/slf4j-api-1.7.12.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/vecmath-1.5.2.jar" />
       </element>
     </root>
   </artifact>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: PDFRenderer-0.9.1.jar vecmath-1.5.2.jar poly2tri-core-0.1.
+ 0-SNAPSHOT.jar slf4j-api-1.7.12.jar
+Main-Class: com.yahiab.graphix.GraphiXX
+

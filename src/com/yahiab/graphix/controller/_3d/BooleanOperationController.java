@@ -128,6 +128,7 @@ public class BooleanOperationController implements Initializable {
         play.setScaleX(0.7);
         play.setScaleY(0.7);
         play.setScaleZ(0.7);
+        play.setFill(Color.WHITE);
         btnPlay.setGraphic(play);
 
         SVGPath pause = new SVGPath();
@@ -135,6 +136,7 @@ public class BooleanOperationController implements Initializable {
         pause.setScaleX(0.7);
         pause.setScaleY(0.7);
         pause.setScaleZ(0.7);
+        pause.setFill(Color.WHITE);
         btnPause.setGraphic(pause);
     }
 }

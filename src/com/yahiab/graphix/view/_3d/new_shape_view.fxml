@@ -60,8 +60,8 @@
                                       GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10"
                                       GridPane.valignment="CENTER">
                                     <children>
-                                        <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true"
-                                                mnemonicParsing="false" onAction="#btnOKCreateParametricShape"
+                                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                                                onAction="#btnOKCreateParametricShape" styleClass="custombutton"
                                                 text="Créer la forme 3D" HBox.hgrow="ALWAYS"/>
                                     </children>
                                 </HBox>
@@ -111,11 +111,12 @@
                                     <children>
                                         <Button fx:id="btnPlay" maxHeight="30.0" minHeight="30.0"
                                                 mnemonicParsing="false" onAction="#playAnimation" prefHeight="30.0"
-                                                GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                                                styleClass="custombutton" GridPane.halignment="CENTER"
+                                                GridPane.valignment="CENTER"/>
                                         <Button fx:id="btnPause" maxHeight="30.0" minHeight="30.0"
                                                 mnemonicParsing="false" onAction="#pauseAnimation" prefHeight="30.0"
-                                                GridPane.columnIndex="1" GridPane.halignment="CENTER"
-                                                GridPane.valignment="CENTER"/>
+                                                styleClass="custombutton" GridPane.columnIndex="1"
+                                                GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                                     </children>
                                 </GridPane>
                                 <Slider fx:id="newShapeSlider" blockIncrement="1.0" majorTickUnit="250.0" max="2000.0"

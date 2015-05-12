@@ -343,7 +343,7 @@ public class ContentModel implements Initializable {
             oldSubScene.removeEventHandler(ScrollEvent.ANY, scrollEventHandler);
         }
 
-        SubScene subScene = new SubScene(root3D, 800, 600, true, SceneAntialiasing.BALANCED);
+        SubScene subScene = new SubScene(root3D, 400, 400, true, SceneAntialiasing.BALANCED);
         this.subScene.set(subScene);
         subScene.setFill(Color.valueOf("#f2f2f2"));
         subScene.setCamera(camera);

@@ -19,6 +19,7 @@
 .topmenubutton {
     -fx-background-color: #0070d6;
     -fx-border-radius: 10%;
+    -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
 }
 
@@ -35,11 +36,24 @@
 .deletebuttons {
     -fx-background-color: #f04c4a;
     -fx-border-radius: 10%;
+    -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
 }
 
 .deletebuttons:hover {
     -fx-background-color: #f0000e;
+    -fx-text-fill: #ffffff;
+}
+
+.custombutton {
+    -fx-background-color: #0070d6;
+    -fx-border-radius: 10%;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.custombutton:hover {
+    -fx-background-color: #3edc69;
     -fx-text-fill: #ffffff;
 }
 
