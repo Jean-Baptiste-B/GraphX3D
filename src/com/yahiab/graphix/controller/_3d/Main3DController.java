@@ -398,10 +398,10 @@ public class Main3DController implements Initializable {
             btnOpenMenu.setGraphic(SVGPathOpen);
 
             SVGPath rocket = new SVGPath();
-            rocket.setContent(SVGPathIcons.rocket);
-            rocket.setScaleX(0.7);
-            rocket.setScaleY(0.7);
-            rocket.setScaleZ(0.7);
+            rocket.setContent(SVGPathIcons.print3D_1);
+            rocket.setScaleX(0.8);
+            rocket.setScaleY(0.8);
+            rocket.setScaleZ(0.8);
             rocket.setFill(Paint.valueOf("#ffffff"));
             btn3DPrint.setGraphic(rocket);
 

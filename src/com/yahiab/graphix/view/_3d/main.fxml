@@ -54,9 +54,9 @@
                                      <Font name="System Bold" size="13.0"/>
                                  </font>
                              </MenuButton>
-                             <Button fx:id="btn3DPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#saveAsSTLFile" prefHeight="55.0" styleClass="topmenubutton"
-                                     text="Impression 3D" textFill="WHITE">
+                             <Button fx:id="btnPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
+                                     onAction="#printOnPaper" prefHeight="55.0" styleClass="topmenubutton"
+                                     text="Imprimer" textFill="WHITE">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
@@ -64,9 +64,9 @@
                                      <Font name="System Bold" size="13.0"/>
                                  </font>
                              </Button>
-                             <Button fx:id="btnPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#printOnPaper" prefHeight="55.0" styleClass="topmenubutton"
-                                     text="Imprimer" textFill="WHITE">
+                             <Button fx:id="btn3DPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
+                                     onAction="#saveAsSTLFile" prefHeight="55.0" styleClass="topmenubutton"
+                                     text="Impression 3D" textFill="WHITE">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
@@ -723,7 +723,7 @@
                                                     prefWidth="200.0">
                                        <columns>
                                            <TreeTableColumn fx:id="nodeColumn" editable="false" prefWidth="75.0"
-                                                            sortable="false" text="Forme 3D"/>
+                                                            sortable="false" text="Forme 3D" minWidth="120.0"/>
                                            <TreeTableColumn fx:id="visibilityColumn" editable="true" text="Visibilité"/>
                                            <TreeTableColumn fx:id="idColumn" editable="false" prefWidth="75.0"
                                                             text="ID"/>
