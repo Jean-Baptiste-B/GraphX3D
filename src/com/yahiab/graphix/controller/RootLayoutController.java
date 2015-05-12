@@ -4,6 +4,8 @@ import com.yahiab.animations.AnimationsController;
 import com.yahiab.app2d.Main;
 import com.yahiab.coursquiz.CoursQuizController;
 import com.yahiab.graphix.GraphiXX;
+import com.yahiab.graphix.controller.pdf.PDFController;
+import com.yahiab.graphix.controller.videos.VideosController;
 import com.yahiab.graphix.view.SVGPathIcons;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -87,6 +89,11 @@ public class RootLayoutController implements Initializable{
             Stage stageApp3D = new Stage();
             Scene sceneApp3D = new Scene(node);
 
+            /*
+            sceneApp3D.getStylesheets().clear();
+            sceneApp3D.getStylesheets().addAll(GraphiXX.class.getResource("view/_3d/flatred.css").toExternalForm());
+            */
+
             stageApp3D.setMaximized(true);
             stageApp3D.setScene(sceneApp3D);
             stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D et pleins de fonctionnalit\u00e9s");
@@ -165,13 +172,13 @@ public class RootLayoutController implements Initializable{
 
             AnchorPane node = loader.load();
 
+            VideosController videosController = loader.getController();
+
             Stage videoStage = new Stage();
-            videoStage.setMaximized(true);
             Scene videoScene = new Scene(node);
             videoStage.setScene(videoScene);
             videoStage.setTitle("Des videos educatifs pour bien comprendre les différentes formes geometriques 3D");
             videoStage.setResizable(false);
-
             videoStage.show();
 
         } catch (Exception ex) {
@@ -185,12 +192,14 @@ public class RootLayoutController implements Initializable{
             FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("view/pdf/PDFView.fxml"));
             AnchorPane node = loader.load();
 
+            PDFController pdfController = loader.getController();
+
             Stage pdfStage = new Stage();
-            pdfStage.setMaximized(true);
             Scene pdfScene = new Scene(node);
             pdfStage.setScene(pdfScene);
             pdfStage.setTitle("Les patrons des diff\u00e9rentes formes g\u00e9om\u00e9triques 3D");
             pdfStage.setResizable(false);
+            pdfStage.setMaximized(true);
             pdfStage.show();
 
         } catch (Exception ex) {
