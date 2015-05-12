@@ -14,6 +14,7 @@
     -fx-effect: dropshadow(one-pass-box, white, 0, 1.0, 0, 1);
 }
 
+/*
 .settings-header {
     -fx-font-weight: bold;
     -fx-alignment: center;
@@ -23,10 +24,10 @@
 .settings {
     -fx-font-size: 11px;
 }
+*/
 
-.radio-button:selected > .radio > .dot,
-    /*
-    .check-box:selected > .box > .mark,
+/*
+.radio-button:selected > .radio > .dot, .check-box:selected > .box > .mark,
     .check-box:indeterminate  > .box > .mark {
         -fx-background-color: -fx-mark-highlight-color, -fx-mark-color !important;
         -fx-background-insets: 1 0 -1 0, 0;
@@ -100,8 +101,10 @@
 .topmenubutton:hover {
     -fx-background-color: #3edc69;
     -fx-text-fill: #ffffff;
+    /*
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
+    */
 }
 
 .topmenutoolbar {
@@ -122,8 +125,10 @@
 .deletebuttons:hover {
     -fx-background-color: #f0000e;
     -fx-text-fill: #ffffff;
+    /*
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
+    */
 }
 
 /**** slider ***********/
@@ -329,6 +334,10 @@
     -fx-background-color: #913B3B, derive(#DF5B5B, -10%);
 }
 
+.context-menu {
+    -fx-background-color: #DF5B5B;
+}
+
 /************************************************************/
 
 .borders {
@@ -338,3 +347,13 @@
     -fx-border-insets: -2;
 }
 
+.root {
+    -fx-background: #34383B;
+    /*
+    -fx-font-family: "Roboto Light";
+    -fx-font-size: 12px;
+    -fx-font-weight: lighter;
+    -fx-selection-bar: #913B3B;
+    -fx-selection-bar-non-focused: derive(#913B3B, 20%);
+    */
+}

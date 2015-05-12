@@ -13,10 +13,6 @@
     -fx-selection-bar-non-focused: derive(-standard, 20%);
 }
 
-.context-menu {
-    -fx-background-color: -bright;
-}
-
 .button {
     -fx-text-fill: -text-color;
     -fx-outer-border: linear-gradient(to bottom, derive(-standard, 30%) 0%, derive(-standard, -30%) 100%);
