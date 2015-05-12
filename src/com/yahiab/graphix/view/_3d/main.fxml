@@ -323,8 +323,8 @@
                   </AnchorPane>
                   <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="600.0" prefWidth="200.0">
                      <items>
-                         <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
-                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0"
+                         <AnchorPane maxWidth="450.0" prefHeight="200.0" prefWidth="200.0"/>
+                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="240" prefHeight="600.0"
                                     prefWidth="240.0">
                            <panes>
                                <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"
@@ -594,7 +594,7 @@
                                                        <CheckBox fx:id="light1EnabledCheckBox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="4"/>
-                                                       <Label styleClass="normal-label" text="Vérouiller à la camera"
+                                                       <Label styleClass="normal-label" text="liée à la camera"
                                                               GridPane.columnIndex="0" GridPane.rowIndex="6"/>
                                                        <CheckBox fx:id="light1followCameraCheckBox"
                                                                  mnemonicParsing="false" selected="true" text=""
@@ -646,7 +646,7 @@
                                                                showTickMarks="false" value="0.0"
                                                                GridPane.columnIndex="1" GridPane.rowIndex="15"/>
                                                        <Label maxWidth="1.7976931348623157E308"
-                                                              styleClass="settings-header" text="Lumière 3"
+                                                              styleClass="important-title" text="Lumière 3"
                                                               GridPane.columnIndex="0" GridPane.columnSpan="2"
                                                               GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
                                                               GridPane.rowIndex="16" GridPane.valignment="CENTER"/>
@@ -655,7 +655,8 @@
                                                        <CheckBox fx:id="light3EnabledCheckBox" mnemonicParsing="false"
                                                                  text="" GridPane.columnIndex="1"
                                                                  GridPane.rowIndex="17"/>
-                                                       <Label text="X" GridPane.columnIndex="0" GridPane.rowIndex="19"/>
+                                                       <Label styleClass="normal-label" text="X"
+                                                              GridPane.columnIndex="0" GridPane.rowIndex="19"/>
                                                        <Slider fx:id="light3x" majorTickUnit="20.0" max="100.0"
                                                                min="-100.0" minorTickCount="5" showTickLabels="true"
                                                                showTickMarks="false" value="0.0"

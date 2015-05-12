@@ -26,6 +26,8 @@
 .topmenubutton:hover {
     -fx-background-color: #3edc69;
     -fx-text-fill: #ffffff;
+    -fx-border-radius: 10%;
+    -fx-font-weight: bold;
 }
 
 .topmenutoolbar {

@@ -909,10 +909,15 @@ public class Main3DController implements Initializable {
                 }
             });
 
-            CSGShapeColumn.setCellValueFactory(p -> p.getValue().valueProperty().asString());
+            CSGShapeColumn.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Node, String>, ObservableValue<String>>() {
+                @Override
+                public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Node, String> param) {
+                    return new SimpleStringProperty(shapeName(param.getValue().getValue()));
+                }
+            });
+
             CSGShapeID.setCellValueFactory(p -> p.getValue().getValue().idProperty());
 
-            //nodeColumn.setCellValueFactory(p -> p.getValue().valueProperty().asString());
             nodeColumn.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Node, String>, ObservableValue<String>>() {
                 @Override
                 public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Node, String> param) {
