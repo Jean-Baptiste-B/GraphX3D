@@ -95,11 +95,6 @@ public class RootLayoutController implements Initializable{
             Stage stageApp3D = new Stage();
             Scene sceneApp3D = new Scene(node);
 
-            /*
-            sceneApp3D.getStylesheets().clear();
-            sceneApp3D.getStylesheets().addAll(GraphiXX.class.getResource("view/_3d/flatred.css").toExternalForm());
-            */
-
             stageApp3D.setMaximized(true);
             stageApp3D.setScene(sceneApp3D);
             stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D et pleins de fonctionnalit\u00e9s");
@@ -161,7 +156,7 @@ public class RootLayoutController implements Initializable{
             Scene coursQuizScene = new Scene(node);
             coursQuizStage.setScene(coursQuizScene);
             coursQuizStage.setMaximized(true);
-            coursQuizStage.setTitle("Cours et quiz sur les formes g\u00e9om\u00e9trique 2D et 3D");
+            coursQuizStage.setTitle("Cours et quiz sur les formes g\u00e9om\u00e9trique 3D et 2D");
             coursQuizStage.setResizable(false);
             coursQuizStage.show();
 
@@ -183,8 +178,12 @@ public class RootLayoutController implements Initializable{
             Stage videoStage = new Stage();
             Scene videoScene = new Scene(node);
             videoStage.setScene(videoScene);
-            videoStage.setTitle("Des videos educatifs pour bien comprendre les différentes formes geometriques 3D");
+            videoStage.setTitle("Des videos educatifs pour bien comprendre les diff\u00e9rentes formes geometriques 3D et 2D");
             videoStage.setResizable(false);
+            videoStage.setOnCloseRequest(event -> {
+                videosController.getMediaPlayer().dispose();
+                videosController.getVideoPane().getChildren().clear();
+            });
             videoStage.show();
 
         } catch (Exception ex) {

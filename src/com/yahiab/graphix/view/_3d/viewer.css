@@ -287,3 +287,9 @@
     -fx-font-weight: bold;
     -fx-text-fill: #000000;
 }
+
+.videos-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0055aa;
+}

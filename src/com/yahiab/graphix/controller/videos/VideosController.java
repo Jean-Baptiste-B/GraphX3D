@@ -24,9 +24,8 @@ public class VideosController implements Initializable {
     public MediaControl createContent(String mediaURL) {
         if (mediaPlayer != null)
             mediaPlayer.dispose();
-        String adnane = (new File(mediaURL)).toURI().toASCIIString();
-        System.out.println(adnane);
-        mediaPlayer = new MediaPlayer(new Media(adnane));
+        String uri = (new File(mediaURL)).toURI().toASCIIString();
+        mediaPlayer = new MediaPlayer(new Media(uri));
         mediaPlayer.setAutoPlay(true);
         mediaControl = new MediaControl(mediaPlayer);
         mediaControl.setMinSize(600, 400);
@@ -62,5 +61,29 @@ public class VideosController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    public MediaControl getMediaControl() {
+        return mediaControl;
+    }
+
+    public void setMediaControl(MediaControl mediaControl) {
+        this.mediaControl = mediaControl;
+    }
+
+    public MediaPlayer getMediaPlayer() {
+        return mediaPlayer;
+    }
+
+    public void setMediaPlayer(MediaPlayer mediaPlayer) {
+        this.mediaPlayer = mediaPlayer;
+    }
+
+    public Pane getVideoPane() {
+        return videoPane;
+    }
+
+    public void setVideoPane(Pane videoPane) {
+        this.videoPane = videoPane;
     }
 }

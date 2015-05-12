@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0"
             minWidth="1024.0" prefHeight="700.0" prefWidth="1024.0" stylesheets="@../_3d/viewer.css"
             xmlns="http://javafx.com/javafx/8.0.40"
@@ -30,18 +31,34 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                </rowConstraints>
                <children>
-                  <Button minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#playVideo1"
+                  <Button minHeight="30.0" minWidth="220.0" mnemonicParsing="false" onAction="#playVideo1"
                           styleClass="topmenubutton" text="Les solides géométriques (1)" GridPane.halignment="CENTER"
-                          GridPane.valignment="CENTER"/>
-                  <Button minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#playVideo2"
+                          GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0"/>
+                     </font>
+                  </Button>
+                  <Button minHeight="30.0" minWidth="220.0" mnemonicParsing="false" onAction="#playVideo2"
                           styleClass="topmenubutton" text="Les solides géométriques (2)" GridPane.halignment="CENTER"
-                          GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
-                  <Button minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#playVideo3"
+                          GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0"/>
+                     </font>
+                  </Button>
+                  <Button minHeight="30.0" minWidth="220.0" mnemonicParsing="false" onAction="#playVideo3"
                           styleClass="topmenubutton" text="Les formes géométriques planes (1)"
-                          GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
-                  <Button minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#playVideo4"
+                          GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0"/>
+                     </font>
+                  </Button>
+                  <Button minHeight="30.0" minWidth="220.0" mnemonicParsing="false" onAction="#playVideo4"
                           styleClass="topmenubutton" text="Les formes géométriques planes (2)"
-                          GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                          GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0"/>
+                     </font>
+                  </Button>
                </children>
                <GridPane.margin>
                   <Insets bottom="50.0" top="50.0"/>
@@ -53,8 +70,7 @@
                         prefHeight="400.0" prefWidth="600.0"/>
                </children>
             </AnchorPane>
-            <Label styleClass="important-title"
-                   text="Quelques vidéos éducatifs pour bien comprendre la géométrie 2D et 3D"
+            <Label styleClass="videos-title" text="Quelques vidéos éducatifs pour bien comprendre la géométrie 2D et 3D"
                    GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
          </children>
       </GridPane>
