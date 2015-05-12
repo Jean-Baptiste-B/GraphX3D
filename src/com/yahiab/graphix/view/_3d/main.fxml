@@ -13,7 +13,7 @@
    <children>
       <VBox id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-             <GridPane style="-fx-background-color: #ffffff;">
+             <GridPane>
                  <columnConstraints>
                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0"/>
@@ -92,13 +92,18 @@
                              <Insets/>
                          </GridPane.margin>
                      </ToolBar>
-                     <ToggleButton fx:id="btnSettings" contentDisplay="CENTER" maxHeight="55.0" minHeight="55.0"
-                                   mnemonicParsing="false" onAction="#toggleSettings" prefHeight="55.0"
-                                   GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                         <cursor>
-                             <Cursor fx:constant="HAND"/>
-                         </cursor>
-                     </ToggleButton>
+                     <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #ffffff;"
+                              GridPane.columnIndex="1">
+                         <items>
+                             <ToggleButton fx:id="btnSettings" contentDisplay="CENTER" maxHeight="55.0" minHeight="55.0"
+                                           mnemonicParsing="false" onAction="#toggleSettings" prefHeight="55.0"
+                                           styleClass="topmenubutton">
+                                 <cursor>
+                                     <Cursor fx:constant="HAND"/>
+                                 </cursor>
+                             </ToggleButton>
+                         </items>
+                     </ToolBar>
                  </children>
              </GridPane>
              <SplitPane fx:id="outerSplitPane" dividerPositions="0.2" prefHeight="160.0" prefWidth="200.0"
@@ -312,7 +317,7 @@
                   <SplitPane fx:id="splitPane" dividerPositions="0.75" prefHeight="600.0" prefWidth="200.0">
                      <items>
                          <AnchorPane prefHeight="200.0" prefWidth="200.0"/>
-                         <Accordion fx:id="settings" maxWidth="250.0" minWidth="0.0" prefHeight="600.0"
+                         <Accordion fx:id="settings" maxWidth="240.0" minWidth="0.0" prefHeight="600.0"
                                     prefWidth="250.0" style="-fx-background-color: #ffffff;">
                            <panes>
                                <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"

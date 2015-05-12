@@ -57,8 +57,8 @@
 }
 
 /* Make the focused text field look like an unfocused text field, since the whole spinner is already focused. */
-.number-spinner-light .text-field:focused {
-    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+.number-spinner .text-field:focused {
+    -fx-background-color: derive(#ececec, 26.4%), derive(#ececec, 26.4%), derive(#ececec, 80%);
 }
 
 /* Move the insets accordingly, so that there is still a little border visible between buttons and text field. */
@@ -75,8 +75,8 @@
 }
 
 /* Apply the focus style to the whole control */
-.number-spinner-light-focused {
-    -fx-background-color: -fx-focus-color, -fx-text-box-border, -fx-control-inner-background;
+.number-spinner-focused {
+    -fx-background-color: #f25f29, derive(-fx-base, 26.4%), derive(#ececec, 80%);
     -fx-background-insets: -0.4, 1, 2;
     -fx-background-radius: 3.4, 2, 2;
 }
