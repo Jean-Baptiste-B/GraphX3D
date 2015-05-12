@@ -2431,6 +2431,7 @@ public class Main3DController implements Initializable {
                 }
             }
             this.setExpanded(true);
+            /*
             node.setOnMouseClicked(t -> {
                 TreeItem<Node> parent = getParent();
                 while (parent != null) {
@@ -2441,6 +2442,7 @@ public class Main3DController implements Initializable {
                 hierarachyTreeTable.scrollTo(hierarachyTreeTable.getSelectionModel().getSelectedIndex());
                 t.consume();
             });
+            */
         }
     }
 
@@ -2454,6 +2456,7 @@ public class Main3DController implements Initializable {
                 }
             }
             this.setExpanded(true);
+            /*
             node.setOnMouseClicked(t -> {
                 TreeItem<Node> parent = getParent();
                 while (parent != null) {
@@ -2464,6 +2467,7 @@ public class Main3DController implements Initializable {
                 CSGModeTreeTable.scrollTo(CSGModeTreeTable.getSelectionModel().getSelectedIndex());
                 t.consume();
             });
+            */
         }
     }
 }

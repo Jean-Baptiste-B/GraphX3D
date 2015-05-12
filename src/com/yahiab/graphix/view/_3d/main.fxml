@@ -25,7 +25,8 @@
                      <ToolBar>
                          <items>
                              <Button fx:id="btnOpenMenu" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
-                                     onAction="#open" prefHeight="55.0" styleClass="topmenubutton" text="Ouvrir">
+                                     onAction="#open" prefHeight="55.0" styleClass="topmenubutton" text="Ouvrir"
+                                     textFill="WHITE">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
@@ -55,7 +56,7 @@
                              </MenuButton>
                              <Button fx:id="btn3DPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
                                      onAction="#saveAsSTLFile" prefHeight="55.0" styleClass="topmenubutton"
-                                     text="Impression 3D">
+                                     text="Impression 3D" textFill="WHITE">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
@@ -65,7 +66,7 @@
                              </Button>
                              <Button fx:id="btnPrint" maxHeight="55.0" minHeight="55.0" mnemonicParsing="false"
                                      onAction="#printOnPaper" prefHeight="55.0" styleClass="topmenubutton"
-                                     text="Imprimer">
+                                     text="Imprimer" textFill="WHITE">
                                  <cursor>
                                      <Cursor fx:constant="HAND"/>
                                  </cursor>
@@ -327,12 +328,11 @@
                          <Accordion fx:id="settings" maxWidth="240.0" minWidth="240" prefHeight="600.0"
                                     prefWidth="240.0">
                            <panes>
-                               <TitledPane alignment="CENTER" animated="false" expanded="false" text="Formes 3D"
-                                           fx:id="x4">
+                               <TitledPane animated="true" expanded="true" text="Formes géométriques 3D" fx:id="x4">
                                  <content>
                                      <ScrollPane>
                                          <content>
-                                             <GridPane alignment="CENTER" hgap="5.0" styleClass="settings" vgap="5.0">
+                                             <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
                                                  <children>
                                                      <Label alignment="CENTER" text="Formes 3D"
                                                             GridPane.columnSpan="2147483647">
@@ -439,7 +439,7 @@
                                      </ScrollPane>
                                  </content>
                               </TitledPane>
-                               <TitledPane animated="false" text="Opérations booléennes">
+                               <TitledPane animated="true" text="Opérations booléennes">
                                    <content>
                                        <GridPane>
                                            <columnConstraints>
@@ -511,7 +511,7 @@
                                     </GridPane>
                                  </content>
                               </TitledPane>
-                               <TitledPane animated="false" text="Paramètres de la scène">
+                               <TitledPane animated="true" text="Paramètres de la scène">
                                    <content>
                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                            <children>
@@ -556,11 +556,11 @@
                                        </AnchorPane>
                                    </content>
                                </TitledPane>
-                               <TitledPane animated="false" text="Eclairage de la scène" fx:id="x2">
+                               <TitledPane animated="true" text="Eclairage de la scène" fx:id="x2">
                                    <content>
                                        <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                                            <content>
-                                               <GridPane hgap="5.0" styleClass="settings" vgap="5.0">
+                                               <GridPane hgap="5.0" vgap="5.0">
                                                    <padding>
                                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"
                                                                fx:id="x31"/>
@@ -717,7 +717,7 @@
                                        </ScrollPane>
                                    </content>
                                </TitledPane>
-                               <TitledPane animated="false" expanded="true" text="Hièrarchie de la scène" fx:id="x5">
+                               <TitledPane animated="true" expanded="false" text="Contenu de la scène" fx:id="x5">
                                  <content>
                                      <TreeTableView fx:id="hierarachyTreeTable" editable="true" prefHeight="200.0"
                                                     prefWidth="200.0">

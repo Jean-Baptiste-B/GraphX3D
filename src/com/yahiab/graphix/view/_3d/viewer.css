@@ -19,7 +19,6 @@
 .topmenubutton {
     -fx-background-color: #0070d6;
     -fx-border-radius: 10%;
-    -fx-font-weight: bold;
     -fx-text-fill: #ffffff;
 }
 
@@ -27,7 +26,6 @@
     -fx-background-color: #3edc69;
     -fx-text-fill: #ffffff;
     -fx-border-radius: 10%;
-    -fx-font-weight: bold;
 }
 
 .topmenutoolbar {
@@ -244,9 +242,10 @@
 /***************** titled pane *********************/
 
 .titled-pane {
-    -fx-mark-color: #0055aa;
+    -fx-mark-color: white;
     -fx-mark-highlight-color: transparent;
     -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
 }
 
 .titled-pane:focused > .title > .arrow-button > .arrow {
@@ -265,6 +264,7 @@
 
 .context-menu {
     -fx-background-color: #ffffff;
+    -fx-font-weight: bold;
 }
 
 /************************************************************/
