@@ -332,9 +332,12 @@ public class contr2d {
     @FXML
     public void delete() {
         desactiver_error();
-        if (ic + ir + it + ihex + ipara + ipenta + irh + itp + its > 0) {
+        if (ic + ir + it + ihex + ipara + ipenta + irh + itp + its+ite > 0) {
             desactive_retate();
             desactive_pos();
+            desactiver_car_cote();
+            desactiver_hateur_largeur();
+            deletecara();
             if (lenode == 0) {
 
                 deletecara();

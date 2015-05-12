@@ -276,17 +276,6 @@
     -fx-border-insets: -2;
 }
 
-.root {
-    -fx-background: #34383B;
-    /*
-    -fx-font-family: "Roboto Light";
-    -fx-font-size: 12px;
-    -fx-font-weight: lighter;
-    -fx-selection-bar: #913B3B;
-    -fx-selection-bar-non-focused: derive(#913B3B, 20%);
-    */
-}
-
 .important-title {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
