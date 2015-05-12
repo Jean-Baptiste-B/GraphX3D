@@ -27,6 +27,7 @@ import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -73,7 +74,12 @@ public class RootLayoutController implements Initializable{
 
     @FXML
     public void handleHelp() {
-
+        File helpFile = new File("res/help.pdf");
+        try {
+            Runtime.getRuntime().exec("cmd /c start \"\" \"" + helpFile.getAbsolutePath());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     @FXML

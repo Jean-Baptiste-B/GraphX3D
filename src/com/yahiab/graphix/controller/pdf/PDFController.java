@@ -15,7 +15,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.SVGPath;
-import res.PDFs.PDFAccessor;
 
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
@@ -169,47 +168,47 @@ public class PDFController implements Initializable {
 
     @FXML
     public void loadCubePDF() {
-        loadFile(PDFAccessor.class.getResource("cube.pdf").getPath());
+        loadFile("res/PDFs/cube.pdf");
     }
 
     @FXML
     public void loadConePDF() {
-        loadFile(PDFAccessor.class.getResource("cone.pdf").getPath());
+        loadFile("res/PDFs/cone.pdf");
     }
 
     @FXML
     public void loadBoxPDF() {
-        loadFile(PDFAccessor.class.getResource("box.pdf").getPath());
+        loadFile("res/PDFs/box.pdf");
     }
 
     @FXML
     public void loadCylinderPDF() {
-        loadFile(PDFAccessor.class.getResource("cylinder.pdf").getPath());
+        loadFile("res/PDFs/cylinder.pdf");
     }
 
     @FXML
     public void loadDodecahedronPDF() {
-        loadFile(PDFAccessor.class.getResource("dodecahedron.pdf").getPath());
+        loadFile("res/PDFs/dodecahedron.pdf");
     }
 
     @FXML
     public void loadOctahedronPDF() {
-        loadFile(PDFAccessor.class.getResource("octahedron.pdf").getPath());
+        loadFile("res/PDFs/octahedron.pdf");
     }
 
     @FXML
     public void loadPrismPDF() {
-        loadFile(PDFAccessor.class.getResource("prism.pdf").getPath());
+        loadFile("res/PDFs/prism.pdf");
     }
 
     @FXML
     public void loadPyramidPDF() {
-        loadFile(PDFAccessor.class.getResource("pyramid.pdf").getPath());
+        loadFile("res/PDFs/pyramid.pdf");
     }
 
     @FXML
     public void loadTetrahedronPDF() {
-        loadFile(PDFAccessor.class.getResource("tetrahedron.pdf").getPath());
+        loadFile("res/PDFs/tetrahedron.pdf");
     }
 
     class PrintThread extends Thread {

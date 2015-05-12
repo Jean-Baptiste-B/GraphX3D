@@ -1,6 +1,5 @@
 package com.yahiab.graphix.controller.videos;
 
-import com.yahiab.graphix.GraphiXX;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
@@ -25,10 +24,9 @@ public class VideosController implements Initializable {
     public MediaControl createContent(String mediaURL) {
         if (mediaPlayer != null)
             mediaPlayer.dispose();
-        String adnane = (new File(mediaURL)).getAbsolutePath();
-        System.out.println((new File(mediaURL)).getAbsolutePath());
-        System.out.println((new File(mediaURL)).getPath());
-        mediaPlayer = new MediaPlayer(new Media(mediaURL));
+        String adnane = (new File(mediaURL)).toURI().toASCIIString();
+        System.out.println(adnane);
+        mediaPlayer = new MediaPlayer(new Media(adnane));
         mediaPlayer.setAutoPlay(true);
         mediaControl = new MediaControl(mediaPlayer);
         mediaControl.setMinSize(600, 400);
@@ -40,26 +38,25 @@ public class VideosController implements Initializable {
     @FXML
     public void playVideo1() {
         videoPane.getChildren().clear();
-        videoPane.getChildren().addAll(createContent((new File("res/videos/vid3.mp4")).getAbsolutePath()));
-        videoPane.getChildren().addAll(createContent(GraphiXX.class.getResource("../../../res/videos/vid1_3d_solids.mp4").toString()));
+        videoPane.getChildren().addAll(createContent((new File("res/videos/vid1.mp4")).getAbsolutePath()));
     }
 
     @FXML
     public void playVideo2() {
         videoPane.getChildren().clear();
-        videoPane.getChildren().addAll(createContent(GraphiXX.class.getResource("../../../res/videos/vid1_3d.mp4").toString()));
+        videoPane.getChildren().addAll(createContent((new File("res/videos/vid2.mp4")).getAbsolutePath()));
     }
 
     @FXML
     public void playVideo3() {
         videoPane.getChildren().clear();
-        videoPane.getChildren().addAll(createContent(GraphiXX.class.getResource("../../../res/videos/vid2_2d.mp4").toString()));
+        videoPane.getChildren().addAll(createContent((new File("res/videos/vid3.mp4")).getAbsolutePath()));
     }
 
     @FXML
     public void playVideo4() {
         videoPane.getChildren().clear();
-        videoPane.getChildren().addAll(createContent(GraphiXX.class.getResource("../../../res/videos/vid2_2d_train.mp4").toString()));
+        videoPane.getChildren().addAll(createContent((new File("res/videos/vid4.mp4")).getAbsolutePath()));
     }
 
     @Override
