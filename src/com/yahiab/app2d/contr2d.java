@@ -22,11 +22,11 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 
 
 /**
@@ -75,8 +75,6 @@ public class contr2d {
     private GridPane rayon;
     @FXML
     private ImageView pas_element_2D;
-    @FXML
-    private ImageView buttondelete;
     @FXML
     private Separator bare1;
     @FXML
@@ -997,8 +995,6 @@ public String gx(Shape s)
         shape_existe = ic + ir + it + ihex + ipara + ipenta + irh + itp + its + ite > 0;
         panecara.setVisible(shape_existe);
         panecara.setDisable(!shape_existe);
-        buttondelete.setVisible(shape_existe);
-        buttondelete.setDisable(!shape_existe);
     }
     
    
@@ -1090,8 +1086,6 @@ public String gx(Shape s)
         panecara.setDisable(true);
         pas_element_2D.setVisible(true);
         pas_element_2D.setDisable(false);
-        buttondelete.setDisable(true);
-        buttondelete.setVisible(false);
     }
 
 
@@ -1730,18 +1724,6 @@ public String gx(Shape s)
 
     }
 
-   /* @FXML
-    public void export_img()
-    {
-       
-          FXImaging imager = new FXImaging();
-          
-                imager.nodeToImage(place,place.getChildren(),new File("D:/1.png") );
-              
-                
-
-    }*/
-
     @FXML
     public void ar() /**/ {
         desactiver_error();
@@ -2017,26 +1999,28 @@ public String gx(Shape s)
     @FXML
     public void export_img() {
 
-
-        // TODO: probably use a file chooser here
-
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Exporter comme une image .PNG");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image files (*.png)", "*.png"));
+        File f = fileChooser.showSaveDialog(null);
+        if (f == null) return;
+        String fName = f.getAbsolutePath();
+        if (!fName.toLowerCase().endsWith(".png")) {
+            fName += ".png";
+        }
 
         Shape curr_ch = null;
         if (lenode == 0) {
-
             recR.setStrokeWidth(0);
             curr_ch = recR;
-
         } else {
             if (lenode == 1) {
                 recC.setStrokeWidth(0);
                 curr_ch = recC;
-
             } else {
                 if (lenode == 2) {
                     recT.setStrokeWidth(0);
                     curr_ch = recT;
-
                 } else {
                     if (lenode == 3) {
                         rechex.setStrokeWidth(0);
@@ -2075,18 +2059,18 @@ public String gx(Shape s)
 
 
         WritableImage image = place.snapshot(new SnapshotParameters(), null);
-        Date date = new Date();
-        File file = new File("D:/Image_2D/image_2D " + System.currentTimeMillis() + ".png");
         try {
-            ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
-
+            ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", new File(fName));
         } catch (IOException e) {
-            // TODO: handle exception here
-            // curr_ch.setStrokeWidth(3);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erreur");
+            alert.setHeaderText("Erreur lors de l'enregistrement de l'image");
+            alert.setContentText("Une erreur lors de l'enregistrement de l'image sous format .PNG est survenue.\n" +
+                    "Impossible d'enregistrer l'image sous format .PNG");
+            alert.showAndWait();
+            e.printStackTrace();
         }
-        //curr_ch.setStrokeWidth(3);
-
-
+        curr_ch.setStrokeWidth(3);
     }
 
     class Delta {

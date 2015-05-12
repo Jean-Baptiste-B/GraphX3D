@@ -7,41 +7,47 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.*?>
+<?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="600.0" maxWidth="1024.0" minHeight="600.0" minWidth="1024.0"
             prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.40"
             fx:controller="com.yahiab.app2d.contr2d">
     <children>
         <VBox id="root" fx:id="view3dRootVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-              minWidth="-Infinity" prefHeight="542.0" prefWidth="657.0">
+              minWidth="-Infinity" prefHeight="542.0" prefWidth="657.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <ToolBar prefHeight="41.0" prefWidth="658.0" style="-fx-background-color: rgb(100,100,100);">
+                <ToolBar prefHeight="41.0" prefWidth="658.0">
                     <items>
-                        <Pane maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="625.0" HBox.hgrow="ALWAYS">
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="800.0"
+                                                   prefWidth="800.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
                             <children>
-                                <ColorPicker fx:id="idcolor" layoutX="200.0" layoutY="1.0" onAction="#color"
-                                             prefHeight="25.0" prefWidth="150.0" style="-fx-color: rgb(19,180,220);"/>
-                                <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="159.0" layoutY="2.0"
-                                           onMouseClicked="#export_img" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@res/2d/1430800581_698578-icon-65-document-image-128.png"/>
-                                    </image>
-                                    <cursor>
-                                        <Cursor fx:constant="HAND"/>
-                                    </cursor>
-                                </ImageView>
-                                <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="7.0" layoutY="-1.0"
-                                           pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@res/2d/_599254_i0.png"/>
                                     </image>
                                 </ImageView>
-                            </children>
-                        </Pane>
-                        <HBox id="playControls" prefHeight="-1.0" prefWidth="-1.0">
-                            <padding>
-                                <Insets right="5.0"/>
-                            </padding>
+                                <HBox spacing="20.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#export_img"
+                                                styleClass="topmenubutton" text="Enregistrer"/>
+                                        <Button mnemonicParsing="false" onAction="#delete" styleClass="topmenubutton"
+                                                text="Supprimer"/>
+                                        <ColorPicker fx:id="idcolor" onAction="#color" prefHeight="25.0"
+                                                     prefWidth="150.0" style="-fx-color: #0070d6;"/>
+                                    </children>
+                                    <GridPane.margin>
+                                        <Insets left="20.0"/>
+                                    </GridPane.margin>
                         </HBox>
+                            </children>
+                        </GridPane>
                     </items>
                 </ToolBar>
                 <SplitPane fx:id="splitPane" focusTraversable="true" prefHeight="160.0" prefWidth="200.0"
@@ -53,7 +59,8 @@
                                 <AnchorPane fx:id="body" minHeight="0.0" minWidth="350.0" prefHeight="485.0"
                                             prefWidth="454.0" style="-fx-background-color: rgb(80,80,80);">
                                     <children>
-                                        <Pane fx:id="paneca" layoutX="9.0" prefHeight="213.0" prefWidth="200.0"
+                                        <Pane fx:id="paneca" layoutX="9.0" minWidth="235.0" prefHeight="213.0"
+                                              prefWidth="200.0"
                                               style="-fx-background-color: white; -fx-border-color: rgb(19,180,220); -fx-border-width: 0;"
                                               AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="33.0">
                                             <children>
@@ -76,56 +83,66 @@
                                                         </ImageView>
                                                     </children>
                                                 </Pane>
-                                                <GridPane fx:id="panecara" disable="true" hgap="20.0" layoutX="14.0"
-                                                          layoutY="15.0" prefHeight="67.0" prefWidth="158.0"
+                                                <GridPane fx:id="panecara" disable="true" hgap="5.0" layoutX="14.0"
+                                                          layoutY="15.0" prefHeight="67.0" prefWidth="206.0"
                                                           visible="false">
                                                     <children>
                                                         <Label fx:id="textca" layoutX="71.0" layoutY="15.0"
                                                                prefHeight="17.0" prefWidth="84.0"
-                                                               GridPane.columnIndex="1"/>
+                                                               styleClass="normal-label" GridPane.columnIndex="1"
+                                                               GridPane.halignment="CENTER"/>
                                                         <Label layoutX="14.0" layoutY="15.0" prefHeight="17.0"
-                                                               prefWidth="48.0" text="Type :"/>
+                                                               prefWidth="48.0" styleClass="normal-label" text="Type :"
+                                                               GridPane.halignment="CENTER"/>
                                                         <Circle fx:id="colorca" fill="DODGERBLUE"
                                                                 focusTraversable="true" layoutX="71.0" layoutY="54.0"
                                                                 radius="10.0" stroke="#ddd7d7" strokeLineCap="BUTT"
                                                                 strokeLineJoin="BEVEL" strokeWidth="3.0"
-                                                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                                                GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                                                                GridPane.rowIndex="1"/>
                                                         <Label layoutX="14.0" layoutY="45.0" prefHeight="17.0"
-                                                               prefWidth="57.0" text="Couleur :" GridPane.rowIndex="1"/>
+                                                               prefWidth="57.0" styleClass="normal-label"
+                                                               text="Couleur :" GridPane.halignment="CENTER"
+                                                               GridPane.rowIndex="1"/>
                                                     </children>
                                                     <columnConstraints>
-                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0"
-                                                                           minWidth="10.0" prefWidth="62.0"/>
-                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0"
-                                                                           minWidth="10.0" prefWidth="76.0"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES"
+                                                                           maxWidth="1.7976931348623157E308"/>
+                                                        <ColumnConstraints hgrow="SOMETIMES"/>
                                                     </columnConstraints>
                                                     <rowConstraints>
                                                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                                                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                                                     </rowConstraints>
                                                 </GridPane>
-                                                <GridPane fx:id="hauteur_largeur" disable="true" hgap="14.0"
-                                                          layoutX="16.0" layoutY="110.0" visible="false">
+                                                <GridPane fx:id="hauteur_largeur" disable="true" hgap="5.0"
+                                                          layoutX="16.0" layoutY="110.0" prefHeight="50.0"
+                                                          prefWidth="206.0" visible="false">
                                                     <children>
                                                         <GridPane hgap="10.0" layoutX="16.0" layoutY="89.0"
                                                                   prefHeight="50.0" prefWidth="106.0" vgap="10.0">
                                                             <children>
                                                                 <Text layoutX="12.0" layoutY="140.0"
                                                                       strokeType="OUTSIDE" strokeWidth="0.0"
-                                                                      text="Hauteur :" GridPane.rowIndex="1"/>
+                                                                      styleClass="normal-label" text="Hauteur :"
+                                                                      GridPane.halignment="CENTER"
+                                                                      GridPane.rowIndex="1"/>
                                                                 <TextField fx:id="hauteur" layoutX="94.0"
                                                                            layoutY="127.0" maxWidth="44.0"
                                                                            minHeight="20.0" minWidth="30.0"
                                                                            prefHeight="20.0" prefWidth="44.0"
                                                                            GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
                                                                            GridPane.rowIndex="1"/>
                                                                 <Text layoutY="111.0" strokeType="OUTSIDE"
-                                                                      strokeWidth="0.0" text="Largeur :"
-                                                                      wrappingWidth="66.775390625"/>
+                                                                      strokeWidth="0.0" styleClass="normal-label"
+                                                                      text="Largeur :" wrappingWidth="66.775390625"
+                                                                      GridPane.halignment="CENTER"/>
                                                                 <TextField fx:id="largeur" layoutX="94.0" layoutY="89.0"
                                                                            maxWidth="40.0" minHeight="20.0"
                                                                            minWidth="30.0" prefHeight="20.0"
-                                                                           prefWidth="40.0" GridPane.columnIndex="1"/>
+                                                                           prefWidth="40.0" GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"/>
                                                             </children>
                                                             <columnConstraints>
                                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
@@ -138,10 +155,9 @@
                                                         </GridPane>
                                                         <Button layoutX="128.0" layoutY="92.0" mnemonicParsing="false"
                                                                 onAction="#appliquer_largeur_hauteur" prefHeight="31.0"
-                                                                prefWidth="54.0"
-                                                                style="-fx-background-color: rgb(19,170,220);" text="OK"
+                                                                prefWidth="54.0" styleClass="custombutton" text="OK"
                                                                 textAlignment="CENTER" textFill="WHITE"
-                                                                GridPane.columnIndex="1">
+                                                                GridPane.columnIndex="1" GridPane.halignment="CENTER">
                                                             <cursor>
                                                                 <Cursor fx:constant="HAND"/>
                                                             </cursor>
@@ -158,17 +174,18 @@
                                                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                                                     </rowConstraints>
                                                 </GridPane>
-                                                <GridPane fx:id="rayon" disable="true" hgap="21.0" layoutX="16.0"
-                                                          layoutY="122.0" visible="false">
+                                                <GridPane fx:id="rayon" disable="true" hgap="5.0" layoutX="16.0"
+                                                          layoutY="122.0" prefHeight="31.0" prefWidth="199.0"
+                                                          visible="false">
                                                     <children>
-                                                        <Label layoutX="16.0" layoutY="106.0" text="Rayon :"/>
+                                                        <Label layoutX="16.0" layoutY="106.0" styleClass="normal-label"
+                                                               text="Rayon :"/>
                                                         <TextField fx:id="value_rayon" layoutX="63.0" layoutY="102.0"
                                                                    prefHeight="25.0" prefWidth="40.0"
                                                                    GridPane.columnIndex="1"/>
                                                         <Button layoutX="122.0" layoutY="102.0" mnemonicParsing="false"
                                                                 onAction="#appliquer_rayon" prefHeight="31.0"
-                                                                prefWidth="54.0"
-                                                                style="-fx-background-color: rgb(19,170,220);" text="OK"
+                                                                prefWidth="54.0" styleClass="custombutton" text="OK"
                                                                 textFill="WHITE" GridPane.columnIndex="2">
                                                             <font>
                                                                 <Font size="13.0"/>
@@ -189,8 +206,9 @@
                                                 </GridPane>
                                                 <Separator fx:id="bare1" disable="true" layoutX="8.0" layoutY="182.0"
                                                            prefHeight="0.0" prefWidth="182.0" visible="false"/>
-                                                <Pane fx:id="footerca" layoutY="200.0" prefHeight="15.0"
-                                                      prefWidth="200.0" style="-fx-background-color: rgb(19,190,220);"/>
+                                                <Pane fx:id="footerca" layoutY="200.0" minWidth="235.0"
+                                                      prefHeight="15.0" prefWidth="200.0"
+                                                      style="-fx-background-color: rgb(19,190,220);"/>
                                                 <ImageView fx:id="pas_element_2D" fitHeight="126.0" fitWidth="127.0"
                                                            layoutX="40.0" layoutY="36.0" pickOnBounds="true"
                                                            preserveRatio="true">
@@ -217,12 +235,13 @@
                                                     <children>
                                                         <Separator orientation="VERTICAL" prefHeight="200.0"
                                                                    GridPane.columnIndex="1"/>
-                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Côte"
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                              styleClass="normal-label" text="Côte"
                                                               wrappingWidth="50.13671875"/>
                                                         <Button mnemonicParsing="false" onAction="#appliquer_cote"
                                                                 prefHeight="25.0" prefWidth="70.0"
-                                                                style="-fx-background-color: rgb(19,180,220);" text="OK"
-                                                                textFill="WHITE" GridPane.columnIndex="2">
+                                                                styleClass="custombutton" text="OK" textFill="WHITE"
+                                                                GridPane.columnIndex="2">
                                                             <cursor>
                                                                 <Cursor fx:constant="HAND"/>
                                                             </cursor>
@@ -232,11 +251,12 @@
                                                 </GridPane>
                                             </children>
                                         </Pane>
-                                        <GridPane fx:id="gridepos" disable="true" hgap="23.0" layoutX="23.0"
-                                                  layoutY="240.0" visible="false" AnchorPane.topAnchor="220.0">
+                                        <GridPane fx:id="gridepos" disable="true" layoutX="23.0" layoutY="240.0"
+                                                  prefHeight="60.0" prefWidth="199.0" visible="false"
+                                                  AnchorPane.topAnchor="220.0">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
-                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0"/>
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
@@ -244,8 +264,8 @@
                                             <children>
                                                 <Button layoutX="141.0" layoutY="206.0" mnemonicParsing="false"
                                                         onAction="#appliquer_pos" prefHeight="31.0" prefWidth="54.0"
-                                                        style="-fx-background-color: rgb(19,170,220);" text="OK"
-                                                        textFill="WHITE" GridPane.columnIndex="1">
+                                                        styleClass="custombutton" text="OK" textFill="WHITE"
+                                                        GridPane.columnIndex="1">
                                                     <cursor>
                                                         <Cursor fx:constant="HAND"/>
                                                     </cursor>
@@ -253,83 +273,87 @@
                                                         <Font size="13.0"/>
                                                     </font>
                                                 </Button>
-                                                <GridPane layoutX="23.0" layoutY="172.0" prefHeight="60.0"
-                                                          prefWidth="91.0" vgap="5.0">
+                                                <AnchorPane>
                                                     <children>
-                                                        <TextField fx:id="posx" maxWidth="-Infinity"
-                                                                   minHeight="-Infinity" minWidth="-Infinity"
-                                                                   prefHeight="20.0" prefWidth="50.0"
-                                                                   GridPane.columnIndex="1"/>
-                                                        <TextField fx:id="posy" maxWidth="-Infinity"
-                                                                   minHeight="-Infinity" minWidth="-Infinity"
-                                                                   prefHeight="20.0" prefWidth="50.0"
-                                                                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                                                        <Label prefHeight="19.0" prefWidth="63.0" text="Position x :">
-                                                            <font>
-                                                                <Font size="10.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label prefHeight="17.0" prefWidth="59.0" text="Position y :"
-                                                               GridPane.rowIndex="1">
-                                                            <font>
-                                                                <Font size="10.0"/>
-                                                            </font>
-                                                        </Label>
+                                                        <GridPane layoutX="-15.0" prefHeight="60.0" prefWidth="154.0"
+                                                                  vgap="5.0" AnchorPane.bottomAnchor="0.0"
+                                                                  AnchorPane.leftAnchor="0.0"
+                                                                  AnchorPane.rightAnchor="0.0"
+                                                                  AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <TextField fx:id="posx" maxWidth="-Infinity"
+                                                                           minHeight="-Infinity" minWidth="-Infinity"
+                                                                           prefHeight="20.0" prefWidth="50.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"/>
+                                                                <TextField fx:id="posy" maxWidth="-Infinity"
+                                                                           minHeight="-Infinity" minWidth="-Infinity"
+                                                                           prefHeight="20.0" prefWidth="50.0"
+                                                                           GridPane.columnIndex="1"
+                                                                           GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="1"/>
+                                                                <Label prefHeight="19.0" prefWidth="78.0"
+                                                                       styleClass="normal-label" text="Position x :"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.hgrow="ALWAYS">
+                                                                    <font>
+                                                                        <Font size="10.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label prefHeight="17.0" prefWidth="77.0"
+                                                                       styleClass="normal-label" text="Position y :"
+                                                                       GridPane.halignment="CENTER"
+                                                                       GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font size="10.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES"
+                                                                                   maxWidth="1.7976931348623157E308"
+                                                                                   minWidth="10.0" prefWidth="89.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.0"
+                                                                                   minWidth="10.0" prefWidth="62.0"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="57.0" minHeight="10.0"
+                                                                                prefHeight="33.0" vgrow="SOMETIMES"/>
+                                                                <RowConstraints maxHeight="24.0" minHeight="0.0"
+                                                                                prefHeight="24.0" vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                        </GridPane>
                                                     </children>
-                                                    <columnConstraints>
-                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0"
-                                                                           minWidth="10.0" prefWidth="54.0"/>
-                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0"
-                                                                           minWidth="10.0" prefWidth="37.0"/>
-                                                    </columnConstraints>
-                                                    <rowConstraints>
-                                                        <RowConstraints maxHeight="57.0" minHeight="10.0"
-                                                                        prefHeight="33.0" vgrow="SOMETIMES"/>
-                                                        <RowConstraints maxHeight="24.0" minHeight="0.0"
-                                                                        prefHeight="24.0" vgrow="SOMETIMES"/>
-                                                    </rowConstraints>
-                                                </GridPane>
+                                                </AnchorPane>
                                             </children>
                                         </GridPane>
                                         <Text fx:id="error" disable="true" fill="#f2f0f0" layoutX="14.0" layoutY="406.0"
-                                              strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.0">
+                                              strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-label"
+                                              wrappingWidth="154.0">
                                             <font>
                                                 <Font size="11.0"/>
                                             </font>
                                         </Text>
-                                        <Pane layoutX="4.0" prefHeight="29.0" prefWidth="200.0"
+                                        <Pane layoutX="4.0" minWidth="235.0" prefHeight="29.0" prefWidth="200.0"
                                               style="-fx-background-color: rgb(19,190,220);" AnchorPane.leftAnchor="0.0"
-                                              AnchorPane.topAnchor="5.0">
-                                            <children>
-                                                <ImageView fx:id="buttondelete" disable="true" fitHeight="30.0"
-                                                           fitWidth="45.0" layoutX="170.0" layoutY="-1.0"
-                                                           onMouseClicked="#delete" pickOnBounds="true"
-                                                           preserveRatio="true" visible="false">
-                                                    <image>
-                                                        <Image url="@res/2d/delete2.png"/>
-                                                    </image>
-                                                    <cursor>
-                                                        <Cursor fx:constant="HAND"/>
-                                                    </cursor>
-                                                </ImageView>
-                                            </children>
-                                        </Pane>
+                                              AnchorPane.topAnchor="5.0"/>
                                         <Pane fx:id="place" layoutX="211.0" layoutY="4.0" onMouseClicked="#clique_place"
                                               prefHeight="482.0" prefWidth="242.0" style="-fx-background-color: white;"
-                                              AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="209.0"
+                                              AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="240.0"
                                               AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="4.0"/>
                                     </children>
                                 </AnchorPane>
-                                <AnchorPane maxWidth="180.0" minHeight="0.0" minWidth="198.0" prefHeight="489.0"
-                                            prefWidth="198.0" SplitPane.resizableWithParent="false">
+                                <AnchorPane maxWidth="250.0" minHeight="400.0" minWidth="250.0" prefWidth="250.0"
+                                            SplitPane.resizableWithParent="false">
                                     <children>
-                                        <Accordion layoutX="35.0" layoutY="7.0" AnchorPane.rightAnchor="0.0"
+                                        <Accordion layoutX="35.0" layoutY="7.0" AnchorPane.bottomAnchor="0.0"
+                                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
                                                    AnchorPane.topAnchor="0.0">
                                             <panes>
-                                                <TitledPane prefHeight="370.0" prefWidth="202.0" text="2D">
+                                                <TitledPane animated="true" expanded="true" prefHeight="370.0"
+                                                            prefWidth="202.0" text="Formes géométriques 2D">
                                                     <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273955.0"
-                                                                    prefWidth="200.0" style="-: 2px solid white;">
+                                                        <AnchorPane style="-: 2px solid white;">
                                                             <children>
                                                                 <GridPane layoutX="10.0" layoutY="237.0"
                                                                           prefHeight="90.0" prefWidth="182.0"
@@ -352,15 +376,18 @@
                                                                     </columnConstraints>
                                                                 </GridPane>
                                                                 <GridPane hgap="5.0" layoutY="16.0" prefHeight="322.0"
-                                                                          prefWidth="191.0" vgap="15.0">
+                                                                          prefWidth="191.0" vgap="15.0"
+                                                                          AnchorPane.bottomAnchor="50.0"
+                                                                          AnchorPane.leftAnchor="0.0"
+                                                                          AnchorPane.rightAnchor="0.0"
+                                                                          AnchorPane.topAnchor="0.0">
                                                                     <columnConstraints>
                                                                         <ColumnConstraints halignment="CENTER"
                                                                                            hgrow="SOMETIMES"
-                                                                                           maxWidth="95.0"
+                                                                                           maxWidth="1.7976931348623157E308"
                                                                                            minWidth="10.0"
                                                                                            prefWidth="94.0"/>
                                                                         <ColumnConstraints halignment="CENTER"
-                                                                                           maxWidth="126.0"
                                                                                            minWidth="10.0"
                                                                                            prefWidth="92.0"/>
                                                                     </columnConstraints>
@@ -529,15 +556,17 @@
                                                         </AnchorPane>
                                                     </content>
                                                 </TitledPane>
-                                                <TitledPane animated="false" prefHeight="300.0" prefWidth="194.0"
-                                                            text="Triangle">
+                                                <TitledPane animated="true" prefHeight="300.0" prefWidth="194.0"
+                                                            text="Les triangles">
                                                     <content>
-                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0"
-                                                                    prefWidth="178.0">
+                                                        <AnchorPane>
                                                             <children>
                                                                 <GridPane layoutX="1.0" layoutY="46.0"
                                                                           prefHeight="219.0" prefWidth="202.0"
-                                                                          AnchorPane.topAnchor="20.0">
+                                                                          AnchorPane.bottomAnchor="250.0"
+                                                                          AnchorPane.leftAnchor="0.0"
+                                                                          AnchorPane.rightAnchor="0.0"
+                                                                          AnchorPane.topAnchor="10.0">
                                                                     <columnConstraints>
                                                                         <ColumnConstraints halignment="CENTER"
                                                                                            hgrow="SOMETIMES"
@@ -599,16 +628,26 @@
                                                                             </cursor>
                                                                         </ImageView>
                                                                         <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                                              text="Triangle isocèle"/>
+                                                                              text="Triangle isocèle"
+                                                                              textAlignment="CENTER"
+                                                                              wrappingWidth="106.42253875732422"
+                                                                              GridPane.halignment="CENTER"
+                                                                              GridPane.hgrow="ALWAYS"
+                                                                              GridPane.valignment="CENTER"/>
                                                                         <Text strokeType="OUTSIDE" strokeWidth="0.0"
                                                                               text="Triangle Equilateral"
-                                                                              wrappingWidth="93.16796875"
+                                                                              textAlignment="CENTER"
+                                                                              wrappingWidth="113.16796112060547"
                                                                               GridPane.halignment="CENTER"
-                                                                              GridPane.rowIndex="2"/>
+                                                                              GridPane.hgrow="ALWAYS"
+                                                                              GridPane.rowIndex="2"
+                                                                              GridPane.valignment="CENTER"/>
                                                                         <Text strokeType="OUTSIDE" strokeWidth="0.0"
                                                                               text="Triangle Perpenduculaire"
-                                                                              wrappingWidth="91.642578125"
+                                                                              textAlignment="CENTER"
+                                                                              wrappingWidth="124.9759521484375"
                                                                               GridPane.halignment="CENTER"
+                                                                              GridPane.hgrow="ALWAYS"
                                                                               GridPane.rowIndex="1"
                                                                               GridPane.valignment="CENTER"/>
                                                                     </children>
@@ -625,8 +664,11 @@
                         </SplitPane>
                     </items>
                 </SplitPane>
-                <ToolBar id="statusBar" style="-fx-background-color: rgb(100,100,100);" styleClass="bottom"/>
+                <ToolBar id="statusBar" styleClass="bottom"/>
             </children>
+            <stylesheets>
+                <URL value="@kikim_css.css"/>
+            </stylesheets>
         </VBox>
     </children>
 </AnchorPane>

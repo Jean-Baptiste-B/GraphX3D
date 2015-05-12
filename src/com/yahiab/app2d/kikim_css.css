@@ -1,0 +1,60 @@
+
+.topmenubutton {
+    -fx-background-color: #0070d6;
+    -fx-border-radius: 10%;
+    -fx-text-fill: #ffffff;
+}
+
+.topmenubutton:hover {
+    -fx-background-color: #3edc69;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 10%;
+}
+
+.custombutton {
+    -fx-background-color: #0070d6;
+    -fx-border-radius: 10%;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.custombutton:hover {
+    -fx-background-color: #3edc69;
+    -fx-text-fill: #ffffff;
+}
+
+/***************** titled pane *********************/
+
+.titled-pane {
+    -fx-mark-color: white;
+    -fx-mark-highlight-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.titled-pane:focused > .title > .arrow-button > .arrow {
+    -fx-mark-color: white;
+    -fx-focus-color: transparent;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #0055aa, #0070d6;
+    -fx-background-insets: 0, 1 0 0 0;
+}
+
+.titled-pane > .title:hover {
+    -fx-background-color: #0055aa, derive(#0070d6, -10%);
+}
+
+.important-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0055aa;
+}
+
+.normal-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
