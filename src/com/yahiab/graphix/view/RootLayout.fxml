@@ -3,27 +3,24 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0"
-            prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.40"
-            fx:controller="com.yahiab.graphix.controller.RootLayoutController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="com.yahiab.graphix.controller.RootLayoutController">
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
                 <Menu mnemonicParsing="false" text="Ouvrir">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#actionButton3D" text="L'éditeur graphique 3D"/>
-                        <MenuItem mnemonicParsing="false" onAction="#actionButton2D" text="L'éditeur graphique 2D"/>
-                        <MenuItem mnemonicParsing="false" onAction="#actionButtonDemos" text="Animations"/>
-                        <MenuItem mnemonicParsing="false" onAction="#actionButtonQuiz" text="Cours et Quiz"/>
-                        <MenuItem mnemonicParsing="false" onAction="#actionButtonPDF" text="Patrons des formes 3D"/>
-                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quitter"/>
+                        <MenuItem mnemonicParsing="false" onAction="#actionButton3D" text="L'éditeur graphique 3D" />
+                        <MenuItem mnemonicParsing="false" onAction="#actionButton2D" text="L'éditeur graphique 2D" />
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonDemos" text="Animations" />
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonQuiz" text="Cours et Quiz" />
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonPDF" text="Patrons des formes 3D" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quitter" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleHelp" text="Aide"/>
-                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="A propos"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleHelp" text="Aide" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="A propos" />
                     </items>
                 </Menu>
             </menus>
@@ -32,150 +29,115 @@
     <center>
         <AnchorPane fx:id="rootAnchorLayout" prefHeight="768.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
             <children>
-                <StackPane fx:id="stackPane" layoutX="150.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0"
-                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <StackPane fx:id="stackPane" layoutX="150.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                   <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER"/>
+                   <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER" />
                    <GridPane alignment="CENTER">
                        <columnConstraints>
-                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0"/>
-                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0"/>
-                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0"/>
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="250.0" />
                        </columnConstraints>
                        <rowConstraints>
-                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="200.0" vgrow="SOMETIMES"/>
-                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="175.0" minHeight="175.0" prefHeight="30.0" vgrow="SOMETIMES" />
                        </rowConstraints>
                        <children>
-                           <GridPane GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowSpan="2"
-                                     GridPane.valignment="CENTER">
+                           <GridPane GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btn3DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="292.0"
-                                           maxWidth="300.0" minHeight="292.0" minWidth="475.0" mnemonicParsing="false"
-                                           onAction="#actionButton3D" prefHeight="292.0" prefWidth="300.0"
-                                           GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Editeur graphique 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                          GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btn3DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="292.0" maxWidth="300.0" minHeight="292.0" minWidth="475.0" mnemonicParsing="false" onAction="#actionButton3D" prefHeight="292.0" prefWidth="300.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Button maxWidth="475.0" minWidth="475.0" mnemonicParsing="false" prefWidth="475.0" text="Editeur graphique 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
-                           <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                     GridPane.valignment="CENTER">
+                           <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnDemos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
-                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
-                                           onAction="#actionButtonDemos" prefHeight="120.0" prefWidth="200.0"
-                                           GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Animations" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                          GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btnDemos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonDemos" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Animations" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
-                           <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2"
-                                     GridPane.valignment="CENTER">
+                           <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btn2DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
-                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
-                                           onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0"
-                                           GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                          GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btn2DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Label text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                            <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnQuiz" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
-                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
-                                           onAction="#actionButtonQuiz" prefHeight="120.0" prefWidth="200.0"
-                                           GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Cours et quiz" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                          GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btnQuiz" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonQuiz" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Cours et quiz" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                            <GridPane GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnVideos" alignment="CENTER" contentDisplay="CENTER"
-                                           maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0"
-                                           mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0"
-                                           prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1"
-                                          GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btnVideos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Label text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
-                           <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"
-                                     GridPane.valignment="CENTER">
+                           <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                <GridPane.margin>
-                                   <Insets bottom="15.0" top="15.0"/>
+                                   <Insets bottom="15.0" top="15.0" />
                                </GridPane.margin>
                                <columnConstraints>
-                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                                </columnConstraints>
                                <rowConstraints>
-                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
-                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0"
-                                                   vgrow="SOMETIMES"/>
+                                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                   <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnPDFs" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
-                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
-                                           onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0"
-                                           GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-                                   <Label text="Patrons des formes 3D" GridPane.halignment="CENTER"
-                                          GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+                                   <Button fx:id="btnPDFs" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Label text="Patrons des formes 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                        </children>
