@@ -1,0 +1,11 @@
+.tagsbuttons {
+    -fx-background-color: #3edc69;
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+    -fx-font-size: 13;
+}
+
+.tagsbuttons:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
