@@ -16,6 +16,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -113,6 +114,7 @@ public class RootLayoutController implements Initializable{
             stageApp3D.setHeight(bounds.getHeight());
             stageApp3D.setWidth(bounds.getWidth());
             stageApp3D.setResizable(false);
+            stageApp3D.getIcons().addAll(new Image("/res/GraphX.png"));
             stageApp3D.show();
 
         } catch (IOException e) {
@@ -134,6 +136,7 @@ public class RootLayoutController implements Initializable{
             app2dStage.setHeight(bounds.getHeight());
             app2dStage.setWidth(bounds.getWidth());
             app2dStage.setResizable(false);
+            app2dStage.getIcons().addAll(new Image("/res/GraphX.png"));
             app2dStage.show();
 
         } catch (Exception ex) {
@@ -156,6 +159,7 @@ public class RootLayoutController implements Initializable{
             animationsStage.setHeight(bounds.getHeight());
             animationsStage.setWidth(bounds.getWidth());
             animationsStage.setResizable(false);
+            animationsStage.getIcons().addAll(new Image("/res/GraphX.png"));
             animationsStage.show();
 
         } catch (Exception ex) {
@@ -175,6 +179,7 @@ public class RootLayoutController implements Initializable{
             coursQuizStage.setHeight(bounds.getHeight());
             coursQuizStage.setWidth(bounds.getWidth());
             coursQuizStage.setResizable(false);
+            coursQuizStage.getIcons().addAll(new Image("/res/GraphX.png"));
             coursQuizStage.show();
 
         } catch (Exception ex) {
@@ -204,6 +209,7 @@ public class RootLayoutController implements Initializable{
                     videosController.getMediaPlayer().dispose();
                 videosController.getVideoPane().getChildren().clear();
             });
+            videoStage.getIcons().addAll(new Image("/res/GraphX.png"));
             videoStage.show();
 
         } catch (Exception ex) {
@@ -224,6 +230,7 @@ public class RootLayoutController implements Initializable{
             pdfStage.setHeight(bounds.getHeight());
             pdfStage.setWidth(bounds.getWidth());
             pdfStage.setResizable(false);
+            pdfStage.getIcons().addAll(new Image("/res/GraphX.png"));
             pdfStage.show();
 
         } catch (Exception ex) {
