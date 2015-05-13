@@ -2,10 +2,17 @@
     -fx-background-color: #3edc69;
     -fx-text-fill: white;
     -fx-font-weight: bolder;
-    -fx-font-size: 13;
+    -fx-font-size: 14px;
 }
 
 .tagsbuttons:hover {
-    -fx-background-color: white;
-    -fx-text-fill: black;
+    -fx-background-color: #0070d6;
+}
+
+.shapesbuttons {
+    -fx-background-color: #ffffee;
+}
+
+.shapesbuttons:hover {
+    -fx-scale-y: 1.02;
 }

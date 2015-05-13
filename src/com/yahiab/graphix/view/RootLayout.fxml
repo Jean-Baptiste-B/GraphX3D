@@ -56,7 +56,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btn3DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="292.0" maxWidth="300.0" minHeight="292.0" minWidth="475.0" mnemonicParsing="false" onAction="#actionButton3D" prefHeight="292.0" prefWidth="300.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btn3DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="292.0"
+                                           maxWidth="300.0" minHeight="292.0" minWidth="475.0" mnemonicParsing="false"
+                                           onAction="#actionButton3D" prefHeight="292.0" prefWidth="300.0"
+                                           styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="475.0" minWidth="475.0" mnemonicParsing="false" prefWidth="475.0" styleClass="tagsbuttons" text="Editeur graphique 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -72,7 +76,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnDemos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonDemos" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btnDemos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
+                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
+                                           onAction="#actionButtonDemos" prefHeight="120.0" prefWidth="200.0"
+                                           styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Animations" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -88,7 +96,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btn2DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btn2DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
+                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
+                                           onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0"
+                                           styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -104,7 +116,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnQuiz" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonQuiz" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btnQuiz" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
+                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
+                                           onAction="#actionButtonQuiz" prefHeight="120.0" prefWidth="200.0"
+                                           styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Cours et quiz" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -120,7 +136,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnVideos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btnVideos" alignment="CENTER" contentDisplay="CENTER"
+                                           maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0"
+                                           mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0"
+                                           prefWidth="200.0" styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -136,7 +156,11 @@
                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                </rowConstraints>
                                <children>
-                                   <Button fx:id="btnPDFs" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                   <Button fx:id="btnPDFs" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0"
+                                           maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
+                                           onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0"
+                                           styleClass="shapesbuttons" GridPane.halignment="CENTER"
+                                           GridPane.valignment="CENTER"/>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Les patrons des formes 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>

@@ -319,7 +319,7 @@ public class RootLayoutController implements Initializable{
         // when we are done we spawn another node
         timeline.setOnFinished(evt -> {
             container.getChildren().remove(node);
-            spawnCircles(container);
+            spawnRectangles(container);
         });
         // finally, we play the timeline
         timeline.play();
