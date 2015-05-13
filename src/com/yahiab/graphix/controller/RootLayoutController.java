@@ -95,10 +95,10 @@ public class RootLayoutController implements Initializable{
             Stage stageApp3D = new Stage();
             Scene sceneApp3D = new Scene(node);
 
-            stageApp3D.setMaximized(true);
             stageApp3D.setScene(sceneApp3D);
-            stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D et pleins de fonctionnalit\u00e9s");
+            stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D, les op\u00e9ration bool\u00e9ennes, et pleins d'autres fonctionnalit\u00e9s");
             stageApp3D.setResizable(false);
+            stageApp3D.setMaximized(true);
             stageApp3D.show();
 
         } catch (IOException e) {

@@ -369,8 +369,8 @@
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="5"
                                                              GridPane.valignment="CENTER"/>
-                                                     <Button fx:id="btnTrapezoid" minHeight="100.0"
-                                                             mnemonicParsing="false" onAction="#actionCreateTrapezoid"
+                                                     <Button fx:id="btnTetrahedron" minHeight="100.0"
+                                                             mnemonicParsing="false" onAction="#actionCreateTetrahedron"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="5"
                                                              GridPane.valignment="CENTER"/>
@@ -399,8 +399,8 @@
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="6"
                                                              GridPane.valignment="CENTER"/>
-                                                     <Button fx:id="btnTetrahedron" minHeight="100.0"
-                                                             mnemonicParsing="false" onAction="#actionCreateTetrahedron"
+                                                     <Button fx:id="btnTrapezoid" minHeight="100.0"
+                                                             mnemonicParsing="false" onAction="#actionCreateTrapezoid"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="8"
                                                              GridPane.valignment="CENTER"/>
@@ -722,8 +722,8 @@
                                      <TreeTableView fx:id="hierarachyTreeTable" editable="true" prefHeight="200.0"
                                                     prefWidth="200.0">
                                        <columns>
-                                           <TreeTableColumn fx:id="nodeColumn" editable="false" prefWidth="75.0"
-                                                            sortable="false" text="Forme 3D" minWidth="120.0"/>
+                                           <TreeTableColumn fx:id="nodeColumn" editable="false" minWidth="120.0"
+                                                            prefWidth="75.0" sortable="false" text="Forme 3D"/>
                                            <TreeTableColumn fx:id="visibilityColumn" editable="true" text="Visibilité"/>
                                            <TreeTableColumn fx:id="idColumn" editable="false" prefWidth="75.0"
                                                             text="ID"/>
@@ -744,6 +744,8 @@
              <items>
                  <Label fx:id="statusNumberOfNodes" text="Label"/>
                  <Label fx:id="statusSelectedShape" text="Label"/>
+                 <Label layoutX="500.0"
+                        text="Veuillez appuyer sur Alt + le bouton gauche/droit de la souris pour manipuler la caméra"/>
              </items>
            </ToolBar>
          </children>

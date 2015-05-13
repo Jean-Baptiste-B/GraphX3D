@@ -336,9 +336,9 @@ public class Main3DController implements Initializable {
             selectedShapeRotateZ.setMinValue(-360);
             selectedShapeRotateZ.setMaxValue(+360);
 
-            selectedShapeScaleX.setMinValue(0);
-            selectedShapeScaleY.setMinValue(0);
-            selectedShapeScaleZ.setMinValue(0);
+            selectedShapeScaleX.setMinValue(0.1);
+            selectedShapeScaleY.setMinValue(0.1);
+            selectedShapeScaleZ.setMinValue(0.1);
 
             selectedShapeTranslateX.setMinValue(-10000);
             selectedShapeTranslateX.setMaxValue(+10000);
@@ -509,6 +509,11 @@ public class Main3DController implements Initializable {
             trapezoid.setFitHeight(75);
             trapezoid.setFitWidth(75);
             btnTrapezoid.setGraphic(trapezoid);
+
+            ImageView spring = new ImageView(new Image("/res/PNGs/spring.png"));
+            spring.setFitWidth(75);
+            spring.setFitHeight(75);
+            btnSpring.setGraphic(spring);
             ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -2373,7 +2378,7 @@ public class Main3DController implements Initializable {
         else if (shape instanceof CubeMesh)
             return "Cube";
         else if (shape instanceof Box)
-            return "Parall\u00e9lipip\u00e8de";
+            return "Parall\u00e9l\u00e9pip\u00e8de";
         else if (shape instanceof Sphere)
             return "Sph\u00e8re";
         else if (shape instanceof Cylinder)
@@ -2391,7 +2396,7 @@ public class Main3DController implements Initializable {
         else if (shape instanceof SpheroidMesh)
             return "Sph\u00e8roide";
         else if (shape instanceof SpringMesh)
-            return "Ressort";
+            return "H\u00e9lice";
         else if (shape instanceof TorusMesh)
             return "Tore";
         else if (shape instanceof TetrahedronMesh)
@@ -2409,7 +2414,7 @@ public class Main3DController implements Initializable {
     }
 
     private String statusBarSelectedShape() {
-        return String.format("\t\tLa forme 3D s\u00e9lectionn\u00e9e est : %s", shapeName(selectedShapeProperty.get()).toLowerCase());
+        return String.format("\t\tLa forme 3D s\u00e9lectionn\u00e9e est : %-30s", shapeName(selectedShapeProperty.get()).toLowerCase());
     }
 
     ////// NEEDED FOR UNDO/REDO ///////////////////////////////////////////////////////////////////
