@@ -61,6 +61,10 @@ public class RootLayoutController implements Initializable{
     @FXML
     private Button btnQuiz;
     @FXML
+    private Button btnVideos;
+    @FXML
+    private Button btnPDFs;
+    @FXML
     private StackPane stackPane;
     @FXML
     private Pane pane;
@@ -226,34 +230,51 @@ public class RootLayoutController implements Initializable{
         SVGPath SVGPath3D = new SVGPath();
         SVGPath3D.setContent(SVGPathIcons.SVG3DApp);
         SVGPath3D.setFill(Paint.valueOf("#1e04c9"));
-        SVGPath3D.setScaleX(3);
-        SVGPath3D.setScaleY(3);
-        SVGPath3D.setScaleZ(3);
+        SVGPath3D.setScaleX(5);
+        SVGPath3D.setScaleY(5);
+        SVGPath3D.setScaleZ(5);
         btn3DApp.setGraphic(SVGPath3D);
 
         SVGPath SVGPath2D = new SVGPath();
         SVGPath2D.setContent(SVGPathIcons.SVG2DApp);
         SVGPath2D.setFill(Paint.valueOf("#ee007f"));
-        SVGPath2D.setScaleX(2.3);
-        SVGPath2D.setScaleY(2.3);
-        SVGPath2D.setScaleZ(2.3);
+        SVGPath2D.setScaleX(1.5);
+        SVGPath2D.setScaleY(1.5);
+        SVGPath2D.setScaleZ(1.5);
         btn2DApp.setGraphic(SVGPath2D);
 
         SVGPath SVGPathDemos = new SVGPath();
-        SVGPathDemos.setContent(SVGPathIcons.SVGDemos);
-        SVGPathDemos.setFill(Paint.valueOf("#ff6300"));
-        SVGPathDemos.setScaleX(3);
-        SVGPathDemos.setScaleY(3);
-        SVGPathDemos.setScaleZ(3);
+        SVGPathDemos.setContent(SVGPathIcons.map);
+        SVGPathDemos.setFill(Paint.valueOf("#ff0000"));
+        SVGPathDemos.setScaleX(1.8);
+        SVGPathDemos.setScaleY(1.8);
+        SVGPathDemos.setScaleZ(1.8);
         btnDemos.setGraphic(SVGPathDemos);
 
         SVGPath SVGPathQuiz = new SVGPath();
         SVGPathQuiz.setContent(SVGPathIcons.SVGQuiz);
         SVGPathQuiz.setFill(Paint.valueOf("#2ea436"));
-        SVGPathQuiz.setScaleX(2.2);
-        SVGPathQuiz.setScaleY(2.2);
-        SVGPathQuiz.setScaleZ(2.2);
+        SVGPathQuiz.setScaleX(1.5);
+        SVGPathQuiz.setScaleY(1.5);
+        SVGPathQuiz.setScaleZ(1.5);
         btnQuiz.setGraphic(SVGPathQuiz);
+
+        SVGPath videos = new SVGPath();
+        videos.setContent(SVGPathIcons.SVGVideo);
+        videos.setFill(Paint.valueOf("#ccdb00"));
+        videos.setScaleX(2.4);
+        videos.setScaleY(2.4);
+        videos.setScaleZ(2.4);
+        btnVideos.setGraphic(videos);
+
+        SVGPath scissors = new SVGPath();
+        scissors.setContent(SVGPathIcons.scissors);
+        scissors.setFill(Paint.valueOf("#965000"));
+        scissors.setScaleX(1.7);
+        scissors.setScaleY(1.7);
+        scissors.setScaleZ(1.7);
+        btnPDFs.setGraphic(scissors);
+
 
         pane.setStyle("-fx-background-color: rgba(1, 0, 255, 0.24)");
         int spawnNodes = 500;
