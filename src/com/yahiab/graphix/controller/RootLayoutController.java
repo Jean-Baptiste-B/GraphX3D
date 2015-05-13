@@ -4,7 +4,6 @@ import com.yahiab.animations.AnimationsController;
 import com.yahiab.app2d.Main;
 import com.yahiab.coursquiz.CoursQuizController;
 import com.yahiab.graphix.GraphiXX;
-import com.yahiab.graphix.controller.pdf.PDFController;
 import com.yahiab.graphix.controller.videos.VideosController;
 import com.yahiab.graphix.view.SVGPathIcons;
 import javafx.animation.KeyFrame;
@@ -13,6 +12,7 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -24,6 +24,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.SVGPath;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -48,6 +49,7 @@ public class RootLayoutController implements Initializable{
 
     @FXML
     AnchorPane rootAnchorLayout;
+    Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
     @FXML
     private BorderPane rootBorderPane;
     @FXML
@@ -97,8 +99,9 @@ public class RootLayoutController implements Initializable{
 
             stageApp3D.setScene(sceneApp3D);
             stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D, les op\u00e9ration bool\u00e9ennes, et pleins d'autres fonctionnalit\u00e9s");
+            stageApp3D.setHeight(bounds.getHeight());
+            stageApp3D.setWidth(bounds.getWidth());
             stageApp3D.setResizable(false);
-            stageApp3D.setMaximized(true);
             stageApp3D.show();
 
         } catch (IOException e) {
@@ -116,8 +119,9 @@ public class RootLayoutController implements Initializable{
             Scene app2dScene = new Scene(node);
 
             app2dStage.setScene(app2dScene);
-            app2dStage.setMaximized(true);
             app2dStage.setTitle("Editeur graphique 2D pour enfants");
+            app2dStage.setHeight(bounds.getHeight());
+            app2dStage.setWidth(bounds.getWidth());
             app2dStage.setResizable(false);
             app2dStage.show();
 
@@ -137,8 +141,9 @@ public class RootLayoutController implements Initializable{
             animationsScene.getStylesheets().add("com/yahiab/animations/res/animations/sky.css");
 
             animationsStage.setScene(animationsScene);
-            animationsStage.setMaximized(true);
             animationsStage.setTitle("Animations des diff\u00e9rentes formes g\u00e9om\u00e9triques 3D");
+            animationsStage.setHeight(bounds.getHeight());
+            animationsStage.setWidth(bounds.getWidth());
             animationsStage.setResizable(false);
             animationsStage.show();
 
@@ -155,8 +160,9 @@ public class RootLayoutController implements Initializable{
             Stage coursQuizStage = new Stage();
             Scene coursQuizScene = new Scene(node);
             coursQuizStage.setScene(coursQuizScene);
-            coursQuizStage.setMaximized(true);
             coursQuizStage.setTitle("Cours et quiz sur les formes g\u00e9om\u00e9trique 3D et 2D");
+            coursQuizStage.setHeight(bounds.getHeight());
+            coursQuizStage.setWidth(bounds.getWidth());
             coursQuizStage.setResizable(false);
             coursQuizStage.show();
 
@@ -179,6 +185,8 @@ public class RootLayoutController implements Initializable{
             Scene videoScene = new Scene(node);
             videoStage.setScene(videoScene);
             videoStage.setTitle("Des videos educatifs pour bien comprendre les diff\u00e9rentes formes geometriques 3D et 2D");
+            videoStage.setHeight(bounds.getHeight());
+            videoStage.setWidth(bounds.getWidth());
             videoStage.setResizable(false);
             videoStage.setOnCloseRequest(event -> {
                 videosController.getMediaPlayer().dispose();
@@ -197,14 +205,13 @@ public class RootLayoutController implements Initializable{
             FXMLLoader loader = new FXMLLoader(GraphiXX.class.getResource("view/pdf/PDFView.fxml"));
             AnchorPane node = loader.load();
 
-            PDFController pdfController = loader.getController();
-
             Stage pdfStage = new Stage();
             Scene pdfScene = new Scene(node);
             pdfStage.setScene(pdfScene);
             pdfStage.setTitle("Les patrons des diff\u00e9rentes formes g\u00e9om\u00e9triques 3D");
+            pdfStage.setHeight(bounds.getHeight());
+            pdfStage.setWidth(bounds.getWidth());
             pdfStage.setResizable(false);
-            pdfStage.setMaximized(true);
             pdfStage.show();
 
         } catch (Exception ex) {

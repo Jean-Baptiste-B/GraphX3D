@@ -6,6 +6,7 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import java.lang.*?>
 <?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" minHeight="600.0" minWidth="1024.0" prefHeight="600.0"
             prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.40"
@@ -145,59 +146,95 @@
                               <RowConstraints maxHeight="27.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                               <Label styleClass="important-title" text="Forme 3D sélectionnée"
-                                      GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
-                                      GridPane.valignment="CENTER">
+                               <Label text="Forme 3D sélectionnée" GridPane.columnSpan="2147483647"
+                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
-                               <Label fx:id="selectedShapeD1Label" styleClass="normal-label" text="Dimension 1"
-                                      GridPane.rowIndex="7"/>
-                               <Label fx:id="selectedShapeD2Label" styleClass="normal-label" text="Dimension 2"
-                                      GridPane.rowIndex="8"/>
-                               <Label fx:id="selectedShapeD3Label" styleClass="normal-label" text="Dimension 3"
-                                      GridPane.rowIndex="9"/>
-                               <Label styleClass="important-title" text="Dimensions de la forme 3D"
-                                      GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                               <Label fx:id="selectedShapeD1Label" text="Dimension 1" GridPane.rowIndex="7">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
+                               <Label fx:id="selectedShapeD2Label" text="Dimension 2" GridPane.rowIndex="8">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
+                               <Label fx:id="selectedShapeD3Label" text="Dimension 3" GridPane.rowIndex="9">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
+                               <Label text="Dimensions de la forme 3D" GridPane.columnSpan="2147483647"
+                                      GridPane.rowIndex="6">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
                               <ColorPicker fx:id="selectedShapeColorPicker" promptText="Color" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="14" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
-                               <Label styleClass="important-title" text="Translation" GridPane.columnSpan="2147483647"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                               <Label text="Translation" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                                      GridPane.rowIndex="16" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="21" />
-                               <Label styleClass="important-title" text="Changement d'échelle"
-                                      GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
-                                      GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                               <Label text="Changement d'échelle" GridPane.columnSpan="2147483647"
+                                      GridPane.halignment="CENTER" GridPane.rowIndex="22" GridPane.valignment="CENTER">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
                               <TextField fx:id="selectedShapeTypeLabel" editable="false" text="type..." GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
-                               <Label styleClass="important-title" text="Position" GridPane.columnSpan="2147483647"
-                                      GridPane.rowIndex="12">
+                               <Label text="Position" GridPane.columnSpan="2147483647" GridPane.rowIndex="12">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="11" />
                               <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="18" />
-                               <Label styleClass="important-title" text="Rotation" GridPane.columnSpan="2147483647"
-                                      GridPane.rowIndex="19">
+                               <Label text="Rotation" GridPane.columnSpan="2147483647" GridPane.rowIndex="19">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
-                               <Label fx:id="selectedShapeD4Label" styleClass="normal-label" text="Dimension 4"
-                                      GridPane.rowIndex="10"/>
+                               <Label fx:id="selectedShapeD4Label" text="Dimension 4" GridPane.rowIndex="10">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
                               <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="13">
                                 <columnConstraints>
                                     <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="40.0" minWidth="20.0" prefWidth="40.0" />
@@ -245,10 +282,25 @@
                                     <NumberSpinner fx:id="selectedShapeScaleZ" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                               <Label styleClass="normal-label" text="Identifiant" GridPane.rowIndex="2"/>
+                               <Label text="Identifiant" GridPane.rowIndex="2">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
                               <TextField fx:id="selectedShapeID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                               <Label styleClass="normal-label" text="Type" GridPane.rowIndex="1"/>
-                               <Label styleClass="normal-label" text="Couleur" GridPane.rowIndex="3"/>
+                               <Label text="Type" GridPane.rowIndex="1">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
+                               <Label text="Couleur" GridPane.rowIndex="3">
+                                   <styleClass>
+                                       <String fx:value="normal-label"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
+                               </Label>
                                <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="20">
                                    <columnConstraints>
                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0"
@@ -312,11 +364,15 @@
                                                GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
                                    </children>
                                </GridPane>
-                               <Label styleClass="important-title" text="Transformations géométriques"
-                                      GridPane.columnSpan="2147483647" GridPane.rowIndex="15">
+                               <Label text="Transformations géométriques" GridPane.columnSpan="2147483647"
+                                      GridPane.rowIndex="15">
                                    <font>
                                        <Font name="System Bold" size="14.0"/>
                                    </font>
+                                   <styleClass>
+                                       <String fx:value="important-title"/>
+                                       <String fx:value="scalableonhover"/>
+                                   </styleClass>
                                </Label>
                            </children>
                         </GridPane>
@@ -334,8 +390,8 @@
                                          <content>
                                              <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
                                                  <children>
-                                                     <Label alignment="CENTER" text="Formes 3D"
-                                                            GridPane.columnSpan="2147483647">
+                                                     <Label alignment="CENTER" styleClass="scalableonhover"
+                                                            text="Formes 3D" GridPane.columnSpan="2147483647">
                                                          <font>
                                                              <Font name="System Bold" size="24.0"/>
                                                          </font>
@@ -343,72 +399,142 @@
                                                      <Button fx:id="btnSphere" minHeight="100.0" mnemonicParsing="false"
                                                              onAction="#actionCreateSphere" prefHeight="100.0"
                                                              prefWidth="100.0" GridPane.halignment="CENTER"
-                                                             GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                                                             GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnBox" minHeight="100.0" minWidth="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateBox"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.columnIndex="1" GridPane.halignment="CENTER"
-                                                             GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+                                                             GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnCylinder" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateCylinder"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.columnIndex="1" GridPane.halignment="CENTER"
-                                                             GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+                                                             GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnCone" minHeight="100.0" mnemonicParsing="false"
                                                              onAction="#actionCreateCone" prefHeight="100.0"
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="4"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnPyramid" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreatePyramid"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="4"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnPrism" minHeight="100.0" mnemonicParsing="false"
                                                              onAction="#actionCreatePrism" prefHeight="100.0"
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="5"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnTetrahedron" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateTetrahedron"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="5"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnCube" minHeight="100.0" minWidth="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateCube"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="2"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnCapsule" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateCapsule"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="6"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnSpheroid" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateSpheroid"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="7"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnSpring" minHeight="100.0" mnemonicParsing="false"
                                                              onAction="#actionCreateSpring" prefHeight="100.0"
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="7"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnTorus" minHeight="100.0" mnemonicParsing="false"
                                                              onAction="#actionCreateTorus" prefHeight="100.0"
                                                              prefWidth="100.0" GridPane.columnIndex="1"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="6"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnTrapezoid" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateTrapezoid"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.halignment="CENTER" GridPane.rowIndex="8"
-                                                             GridPane.valignment="CENTER"/>
+                                                             GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <Button fx:id="btnOctahedron" minHeight="100.0"
                                                              mnemonicParsing="false" onAction="#actionCreateOctahedron"
                                                              prefHeight="100.0" prefWidth="100.0"
                                                              GridPane.columnIndex="1" GridPane.halignment="CENTER"
-                                                             GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
+                                                             GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                                                         <styleClass>
+                                                             <String fx:value="shapesbuttons"/>
+                                                             <String fx:value="scalableonhover"/>
+                                                         </styleClass>
+                                                     </Button>
                                                      <CheckBox fx:id="creationParameters" mnemonicParsing="false"
                                                                selected="true" text="Création paramètrée"
                                                                GridPane.columnSpan="2147483647" GridPane.rowIndex="1"/>

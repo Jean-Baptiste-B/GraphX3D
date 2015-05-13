@@ -293,3 +293,12 @@
     -fx-font-weight: bold;
     -fx-text-fill: #0055aa;
 }
+
+.shapesbuttons:hover {
+    -fx-background-color: #3edc69;
+}
+
+.scalableonhover:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}

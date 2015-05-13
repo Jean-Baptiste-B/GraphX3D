@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.SVGPath;
 
 import java.awt.geom.Rectangle2D;
@@ -61,6 +62,7 @@ public class PDFController implements Initializable {
 
         SVGPath SVGPrint = new SVGPath();
         SVGPrint.setContent(SVGPathIcons.print);
+        SVGPrint.setFill(Color.WHITE);
         btnPrint.setGraphic(SVGPrint);
 
         ImageView cube = new ImageView(new Image("/res/PNGs/cube.png"));
