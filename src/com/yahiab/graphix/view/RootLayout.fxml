@@ -89,7 +89,7 @@
                                </rowConstraints>
                                <children>
                                    <Button fx:id="btn2DApp" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                   <Label text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                            <GridPane GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -121,7 +121,7 @@
                                </rowConstraints>
                                <children>
                                    <Button fx:id="btnVideos" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                   <Label text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                            <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
@@ -137,7 +137,7 @@
                                </rowConstraints>
                                <children>
                                    <Button fx:id="btnPDFs" alignment="CENTER" contentDisplay="CENTER" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false" onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                   <Label text="Patrons des formes 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Les patrons des formes 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
                        </children>
