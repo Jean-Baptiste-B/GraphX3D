@@ -72,9 +72,16 @@ public class RootLayoutController implements Initializable{
     @FXML
     public void handleAbout() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("About");
-        alert.setHeaderText("Look, an Information Dialog");
-        alert.setContentText("Team 21\n\n3D Graphix Editor for Kids\n\nCreated by : Yahia BELHAMRA\n\nEmail : dy_belhamra@esi.dz");
+        alert.setTitle("A propos");
+        alert.setHeaderText("GraphX, un \u00e9diteur grahique 3D pour enfants.");
+        alert.setContentText("Projet de la 2\u00e8me ann\u00e9e CPI, cr\u00e9\u00e9 par l'\u00e9quipe 21: \n\n" +
+                "Yahia BELHAMRA\n" +
+                "Moussaab AMRINE\n" +
+                "Abdelkrim OUKHENNICHE\n" +
+                "Mohammed Amine OUBERKOUK\n" +
+                "Abdennour BENATALLAH\n" +
+                "Maria AISSANI\n\n" +
+                "Encadr\u00e9 par: Mme. BELATTAR et Mme. BOUZAR");
         alert.showAndWait();
     }
 
@@ -102,7 +109,7 @@ public class RootLayoutController implements Initializable{
             Scene sceneApp3D = new Scene(node);
 
             stageApp3D.setScene(sceneApp3D);
-            stageApp3D.setTitle("Editeur graphique 3D pour enfants, avec impression 3D, les op\u00e9ration bool\u00e9ennes, et pleins d'autres fonctionnalit\u00e9s");
+            stageApp3D.setTitle("GraphX, un \u00e9diteur graphique 3D pour enfants, avec impression 3D, les op\u00e9ration bool\u00e9ennes, et pleins d'autres fonctionnalit\u00e9s");
             stageApp3D.setHeight(bounds.getHeight());
             stageApp3D.setWidth(bounds.getWidth());
             stageApp3D.setResizable(false);
@@ -188,12 +195,13 @@ public class RootLayoutController implements Initializable{
             Stage videoStage = new Stage();
             Scene videoScene = new Scene(node);
             videoStage.setScene(videoScene);
-            videoStage.setTitle("Des videos educatifs pour bien comprendre les diff\u00e9rentes formes geometriques 3D et 2D");
+            videoStage.setTitle("Des vid\u00e9os \u00e9ducatifs pour bien comprendre les diff\u00e9rentes formes g\u00e9om\u00e9triques 3D et 2D");
             videoStage.setHeight(bounds.getHeight());
             videoStage.setWidth(bounds.getWidth());
             videoStage.setResizable(false);
             videoStage.setOnCloseRequest(event -> {
-                videosController.getMediaPlayer().dispose();
+                if (videosController.getMediaPlayer() != null)
+                    videosController.getMediaPlayer().dispose();
                 videosController.getVideoPane().getChildren().clear();
             });
             videoStage.show();

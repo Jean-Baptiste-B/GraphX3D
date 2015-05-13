@@ -24,7 +24,7 @@ public class GraphiXX extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("GraphiXX, un \u00e9diteur graphique 3D pour enfants, avec impression 3D et pleins de fonctionnalit\u00e9s");
+        this.primaryStage.setTitle("GraphX, un \u00e9diteur graphique 3D pour enfants, avec impression 3D et pleins d'autres fonctionnalit\u00e9s");
 
         setUserAgentStylesheet(null);
 

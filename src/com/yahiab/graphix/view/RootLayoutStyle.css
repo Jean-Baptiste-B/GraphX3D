@@ -3,6 +3,7 @@
     -fx-text-fill: white;
     -fx-font-weight: bolder;
     -fx-font-size: 14px;
+    -fx-border-radius: 0%;
 }
 
 .tagsbuttons:hover {
@@ -11,8 +12,14 @@
 
 .shapesbuttons {
     -fx-background-color: #ffffee;
+    -fx-border-radius: 0%;
 }
 
 .shapesbuttons:hover {
     -fx-scale-y: 1.02;
+}
+
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-font-weight: bolder;
 }

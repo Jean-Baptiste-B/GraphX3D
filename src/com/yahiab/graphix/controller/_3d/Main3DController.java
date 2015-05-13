@@ -2388,9 +2388,9 @@ public class Main3DController implements Initializable {
         else if (shape instanceof PyramidMesh)
             return "Pyramide";
         else if (shape instanceof TriangularPrismMesh)
-            return "Prisme";
+            return "Prisme Triangulaire";
         else if (shape instanceof TrapezoidMesh)
-            return "Tap\u00e8zoide";
+            return "Prisme Trap\u00e8zoide";
         else if (shape instanceof CapsuleMesh)
             return "Capsule";
         else if (shape instanceof SpheroidMesh)
@@ -2398,7 +2398,7 @@ public class Main3DController implements Initializable {
         else if (shape instanceof SpringMesh)
             return "H\u00e9lice";
         else if (shape instanceof TorusMesh)
-            return "Tore";
+            return "Torus";
         else if (shape instanceof TetrahedronMesh)
             return "Tetra\u00e8dre";
         else if (shape instanceof OctahedronMesh)

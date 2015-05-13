@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.layout.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="com.yahiab.graphix.controller.RootLayoutController">
     <top>
@@ -14,6 +15,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#actionButtonDemos" text="Animations" />
                         <MenuItem mnemonicParsing="false" onAction="#actionButtonQuiz" text="Cours et Quiz" />
                         <MenuItem mnemonicParsing="false" onAction="#actionButtonPDF" text="Patrons des formes 3D" />
+                        <MenuItem mnemonicParsing="false" onAction="#actionButtonVideos" text="Vidéos"/>
                         <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quitter" />
                     </items>
                 </Menu>
@@ -60,7 +62,11 @@
                                            maxWidth="300.0" minHeight="292.0" minWidth="475.0" mnemonicParsing="false"
                                            onAction="#actionButton3D" prefHeight="292.0" prefWidth="300.0"
                                            styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="475.0" minWidth="475.0" mnemonicParsing="false" prefWidth="475.0" styleClass="tagsbuttons" text="Editeur graphique 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -80,7 +86,11 @@
                                            maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
                                            onAction="#actionButtonDemos" prefHeight="120.0" prefWidth="200.0"
                                            styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Animations" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -100,7 +110,11 @@
                                            maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
                                            onAction="#actionButton2D" prefHeight="120.0" prefWidth="200.0"
                                            styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Editeur graphique 2D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -120,7 +134,11 @@
                                            maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
                                            onAction="#actionButtonQuiz" prefHeight="120.0" prefWidth="200.0"
                                            styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Cours et quiz" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -140,7 +158,11 @@
                                            maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0"
                                            mnemonicParsing="false" onAction="#actionButtonVideos" prefHeight="120.0"
                                            prefWidth="200.0" styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Vidéos" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
@@ -160,7 +182,11 @@
                                            maxWidth="200.0" minHeight="120.0" minWidth="200.0" mnemonicParsing="false"
                                            onAction="#actionButtonPDF" prefHeight="120.0" prefWidth="200.0"
                                            styleClass="shapesbuttons" GridPane.halignment="CENTER"
-                                           GridPane.valignment="CENTER"/>
+                                           GridPane.valignment="CENTER">
+                                       <cursor>
+                                           <Cursor fx:constant="HAND"/>
+                                       </cursor>
+                                   </Button>
                               <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" styleClass="tagsbuttons" text="Les patrons des formes 3D" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                </children>
                            </GridPane>
