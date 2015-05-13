@@ -4,12 +4,13 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import java.lang.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="pere" minWidth="1024.0" prefWidth="1024.0"
             stylesheets="@res/CourQuiz/CourStyle.css" xmlns="http://javafx.com/javafx/8.0.40"
             fx:controller="com.yahiab.coursquiz.CoursQuizController">
     <children>
-        <GridPane AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="22.0"
-                  AnchorPane.topAnchor="25.0">
+        <GridPane stylesheets="@../graphix/view/_3d/viewer.css" AnchorPane.bottomAnchor="26.0"
+                  AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="25.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
@@ -2364,48 +2365,103 @@
                                 <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <Button mnemonicParsing="false" onAction="#afficherCourCylindre" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cylindre" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourParallelepipede"
-                                        prefHeight="25.0" prefWidth="80.0" text="Parallelepipede"
-                                        GridPane.halignment="CENTER" GridPane.rowIndex="6"
-                                        GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourTriangle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Triangle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourRectangle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Rectangle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourCercle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cercle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourSphere" prefHeight="25.0"
-                                        prefWidth="80.0" text="Sphere" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourPyramide" prefHeight="25.0"
-                                        prefWidth="80.0" text="Pyramide" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="9" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourCone" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cone" GridPane.halignment="CENTER" GridPane.rowIndex="10"
-                                        GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherCourPrisme" prefHeight="25.0"
-                                        prefWidth="80.0" text="Prisme" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="11" GridPane.valignment="CENTER"/>
-                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" text="2D"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourCylindre"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cylindre" GridPane.halignment="CENTER" GridPane.rowIndex="7"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourParallelepipede"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Parallélépipède" GridPane.halignment="CENTER" GridPane.rowIndex="6"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourTriangle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Triangle" GridPane.halignment="CENTER" GridPane.rowIndex="3"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourRectangle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Rectangle" GridPane.halignment="CENTER" GridPane.rowIndex="2"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourCercle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cercle" GridPane.halignment="CENTER" GridPane.rowIndex="4"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourSphere"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Sphère" GridPane.halignment="CENTER" GridPane.rowIndex="8"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourPyramide"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Pyramide" GridPane.halignment="CENTER" GridPane.rowIndex="9"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourCone"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cone" GridPane.halignment="CENTER" GridPane.rowIndex="10"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherCourPrisme"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Prisme" GridPane.halignment="CENTER" GridPane.rowIndex="11"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="2D" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                                      GridPane.valignment="CENTER">
                                     <font>
                                         <Font size="20.0"/>
                                     </font>
                                 </Text>
-                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" text="3D"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="3D" GridPane.halignment="CENTER" GridPane.rowIndex="5"
+                                      GridPane.valignment="CENTER">
                                     <font>
                                         <Font size="20.0"/>
                                     </font>
                                 </Text>
-                                <Text fill="#ff640d" strokeType="OUTSIDE" strokeWidth="0.0" text="COURS"
-                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <Text fill="#ff640d" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="COURS" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                     <font>
                                         <Font name="System Bold" size="22.0"/>
                                     </font>
@@ -2436,48 +2492,103 @@
                                 <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizCylindre" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cylindre" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizParallelepipede"
-                                        prefHeight="25.0" prefWidth="80.0" text="Parallelepipede"
-                                        GridPane.halignment="CENTER" GridPane.rowIndex="6"
-                                        GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizTriangle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Triangle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizRectangle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Rectangle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizCercle" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cercle" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizSphere" prefHeight="25.0"
-                                        prefWidth="80.0" text="Sphere" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizPyramide" prefHeight="25.0"
-                                        prefWidth="80.0" text="Pyramide" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="9" GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizCone" prefHeight="25.0"
-                                        prefWidth="80.0" text="Cone" GridPane.halignment="CENTER" GridPane.rowIndex="10"
-                                        GridPane.valignment="CENTER"/>
-                                <Button mnemonicParsing="false" onAction="#afficherQuizPrisme" prefHeight="25.0"
-                                        prefWidth="80.0" text="Prisme" GridPane.halignment="CENTER"
-                                        GridPane.rowIndex="11" GridPane.valignment="CENTER"/>
-                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" text="2D"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizCylindre"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cylindre" GridPane.halignment="CENTER" GridPane.rowIndex="7"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizParallelepipede"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Parallélépipède" GridPane.halignment="CENTER" GridPane.rowIndex="6"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizTriangle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Triangle" GridPane.halignment="CENTER" GridPane.rowIndex="3"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizRectangle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Rectangle" GridPane.halignment="CENTER" GridPane.rowIndex="2"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizCercle"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cercle" GridPane.halignment="CENTER" GridPane.rowIndex="4"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizSphere"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Sphère" GridPane.halignment="CENTER" GridPane.rowIndex="8"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizPyramide"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Pyramide" GridPane.halignment="CENTER" GridPane.rowIndex="9"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizCone"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Cone" GridPane.halignment="CENTER" GridPane.rowIndex="10"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Button minWidth="110.0" mnemonicParsing="false" onAction="#afficherQuizPrisme"
+                                        prefHeight="25.0" prefWidth="80.0" stylesheets="@../graphix/view/_3d/viewer.css"
+                                        text="Prisme" GridPane.halignment="CENTER" GridPane.rowIndex="11"
+                                        GridPane.valignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="custombutton"/>
+                                        <String fx:value="scalableonhover"/>
+                                    </styleClass>
+                                </Button>
+                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="2D" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                                      GridPane.valignment="CENTER">
                                     <font>
                                         <Font size="20.0"/>
                                     </font>
                                 </Text>
-                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" text="3D"
-                                      GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                <Text fill="#31f2b8" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="3D" GridPane.halignment="CENTER" GridPane.rowIndex="5"
+                                      GridPane.valignment="CENTER">
                                     <font>
                                         <Font size="20.0"/>
                                     </font>
                                 </Text>
-                                <Text fill="#ff640d" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIZ"
-                                      GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <Text fill="#ff640d" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="scalableonhover"
+                                      text="QUIZ" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                     <font>
                                         <Font name="System Bold" size="22.0"/>
                                     </font>
