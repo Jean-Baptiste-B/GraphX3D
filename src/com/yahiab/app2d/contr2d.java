@@ -211,13 +211,11 @@ public class contr2d {
                                         } else {
                                             if (lenode == 9) {
                                                 recte.setFill(resColor);
-                                                rectis.setFill(resColor);
                                                 s = "Triangle Equilateral";
                                             }
                                         }
                                     }
                                 }
-
                             }
                         }
                     }
