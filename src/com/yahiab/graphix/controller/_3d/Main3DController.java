@@ -314,11 +314,13 @@ public class Main3DController implements Initializable {
     {
         newShapeStage.setTitle("Cr\u00e9ation param\u00e8tr\u00e9e d'une nouvelle forme 3D");
         newShapeStage.setResizable(false);
+        newShapeStage.getIcons().addAll(new Image("/res/GraphX.png"));
     }
 
     {
         booleanOperationStage.setTitle("Op\u00e9rations bool\u00e9ennes entre les formes 3D");
         booleanOperationStage.setResizable(false);
+        booleanOperationStage.getIcons().addAll(new Image("/res/GraphX.png"));
     }
 
     public static ContentModel getContentModel() {
@@ -2021,6 +2023,7 @@ public class Main3DController implements Initializable {
         contentModel.showAxisProperty().bind(showAxisCheckBox.selectedProperty());
 
         SubScenePrintDialog printDialog = new SubScenePrintDialog(true, "Imprimer la sc\u00e8ne", new ImageView(snapshot));
+        printDialog.getIcons().addAll(new Image("/res/GraphX.png"));
         printDialog.show();
         /*
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
